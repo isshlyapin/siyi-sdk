@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['rainbow_0',['Rainbow',['../state_8hxx.html#ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c',1,'siyi']]],
+  ['rangefinder_1',['rangefinder',['../structsiyi_1_1SiyiState.html#a6e8a57e560cfa4857c9f2b9039bd9bba',1,'siyi::SiyiState']]],
+  ['rangefinderdata_2',['RangefinderData',['../structsiyi_1_1RangefinderData.html',1,'siyi']]],
+  ['rangefinderdatastate_3',['RangefinderDataState',['../structsiyi_1_1RangefinderDataState.html',1,'siyi']]],
+  ['recordfail_4',['RecordFail',['../state_8hxx.html#aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61',1,'siyi']]],
+  ['recordingstatus_5',['RecordingStatus',['../state_8hxx.html#aff346f68dcc9b834bed0ce9839e0f8a1',1,'siyi']]],
+  ['recordingstatus_6',['recordingStatus',['../structsiyi_1_1GimbalConfigInfo.html#a15449a2c1072a2f1a24e4dd7a3fb8773',1,'siyi::GimbalConfigInfo']]],
+  ['redhot_7',['RedHot',['../state_8hxx.html#ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf',1,'siyi']]],
+  ['requestcurrentzoomvalue_8',['requestCurrentZoomValue',['../classsiyi_1_1SiyiClient.html#a0a94011bb506f8a668d5086314f3e27f',1,'siyi::SiyiClient']]],
+  ['requestdatastream_9',['requestDataStream',['../classsiyi_1_1SiyiClient.html#ad15d99e2970c9dec0e1c498bbceed378',1,'siyi::SiyiClient']]],
+  ['requestgimbalattitude_10',['requestGimbalAttitude',['../classsiyi_1_1SiyiClient.html#af08efc09e31c6b3f09560bfd39d09158',1,'siyi::SiyiClient']]],
+  ['requestgimbalcamerafirmwareversion_11',['requestGimbalCameraFirmwareVersion',['../classsiyi_1_1SiyiClient.html#abc7ab30679ab81cee27fb2a1b28e1ae7',1,'siyi::SiyiClient']]],
+  ['requestgimbalcamerahardwareid_12',['requestGimbalCameraHardwareID',['../classsiyi_1_1SiyiClient.html#a7577005004844db69353298645494169',1,'siyi::SiyiClient']]],
+  ['requestgimbalcameraimagemode_13',['requestGimbalCameraImageMode',['../classsiyi_1_1SiyiClient.html#a730d36d5a354911c957b333ac3477c35',1,'siyi::SiyiClient']]],
+  ['requestgimbalcamerapresentworkingmode_14',['requestGimbalCameraPresentWorkingMode',['../classsiyi_1_1SiyiClient.html#a5f03336dc73b7f037ffed0afb0ee1bf8',1,'siyi::SiyiClient']]],
+  ['requestgimbalconfiginfo_15',['requestGimbalConfigInfo',['../classsiyi_1_1SiyiClient.html#a8ec3c2127d87213a413cca82506abd8f',1,'siyi::SiyiClient']]],
+  ['requestmaxzoomvalue_16',['requestMaxZoomValue',['../classsiyi_1_1SiyiClient.html#ad96bee682539870df20ea49824403f2f',1,'siyi::SiyiClient']]],
+  ['reserved_17',['Reserved',['../state_8hxx.html#ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47',1,'siyi']]],
+  ['roll_18',['roll',['../structsiyi_1_1GimbalAngle.html#aca0eb37957bb43fec469d655bd75c118',1,'siyi::GimbalAngle::roll'],['../structsiyi_1_1GimbalRotateSpeed.html#ad836f23960ce9794d41f4fa1c612a386',1,'siyi::GimbalRotateSpeed::roll']]]
+];

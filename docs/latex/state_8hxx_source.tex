@@ -1,0 +1,273 @@
+\doxysection{state.\+hxx}
+\hypertarget{state_8hxx_source}{}\label{state_8hxx_source}\index{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/state.hxx@{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/state.hxx}}
+\doxymbox{\hyperlink{state_8hxx}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }siyi\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{state_8hxx_a2d204ed9f2339eafe0add2b877fadb76}{SteadyTimePoint}}\ =\ std::chrono::steady\_clock::time\_point;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structsiyi_1_1StateMeta_aa408beb9e30426c38f271f542bab0ed8}{initialized}}\{\textcolor{keyword}{false}\};\ }
+\DoxyCodeLine{00021\ \ \ \doxymbox{\hyperlink{state_8hxx_a2d204ed9f2339eafe0add2b877fadb76}{SteadyTimePoint}}\ \doxymbox{\hyperlink{structsiyi_1_1StateMeta_a18e73c7440fb1130e51afb44a4f983b3}{updatedAt}};\ }
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ TODO(shlyapin)\ Тесты\ на\ правильные\ числа}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ff}{GimbalMode}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00029\ \ \ \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659}{Lock}}\ \ \ =\ 0,\ }
+\DoxyCodeLine{00030\ \ \ \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd}{Follow}}\ =\ 1,\ }
+\DoxyCodeLine{00031\ \ \ \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756}{Fpv}}\ \ \ \ =\ 2\ \ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14}{MountingDirection}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00038\ \ \ \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}}\ \ \ \ \ =\ 0x01,\ }
+\DoxyCodeLine{00039\ \ \ \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903}{UpsideDown}}\ =\ 0x02\ \ }
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1}{RecordingStatus}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36}{Off}}\ \ \ \ \ \ =\ 0,\ }
+\DoxyCodeLine{00047\ \ \ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3}{On}}\ \ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{00048\ \ \ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e}{NoSdCard}}\ =\ 2,\ }
+\DoxyCodeLine{00049\ \ \ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92}{DataLoss}}\ =\ 3\ \ }
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ TODO(shlyapin):\ Разобраться\ как\ работает\ эта\ команда}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3}{FunctionFeedbackType}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00057\ \ \ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a}{PhotoSuccess}}\ \ \ =\ 0,\ }
+\DoxyCodeLine{00058\ \ \ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42}{PhotoFail}}\ \ \ \ \ \ =\ 1,\ }
+\DoxyCodeLine{00059\ \ \ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42}{HdrOn}}\ \ \ \ \ \ \ \ \ \ =\ 2,\ }
+\DoxyCodeLine{00060\ \ \ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753}{HdrOff}}\ \ \ \ \ \ \ \ \ =\ 3,\ }
+\DoxyCodeLine{00061\ \ \ \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61}{RecordFail}}\ \ \ \ \ =\ 4\ \ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{GimbalCameraImageMode}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00068\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa}{SplitMainZoomAndThermalSubWideAngle}}\ =\ 0,\ }
+\DoxyCodeLine{00069\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9}{SplitMainWideAngleAndThermalSubZoom}}\ =\ 1,\ }
+\DoxyCodeLine{00070\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9}{SplitMainZoomAndWideAngleSubThermal}}\ =\ 2,\ }
+\DoxyCodeLine{00071\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86}{SingleMainZoomSubThermal}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 3,\ }
+\DoxyCodeLine{00072\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e}{SingleMainZoomSubWideAngle}}\ \ \ \ \ \ \ \ \ \ =\ 4,\ }
+\DoxyCodeLine{00073\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f}{SingleMainWideAngleSubThermal}}\ \ \ \ \ \ \ =\ 5,\ }
+\DoxyCodeLine{00074\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171}{SingleMainWideAngleSubZoom}}\ \ \ \ \ \ \ \ \ \ =\ 6,\ }
+\DoxyCodeLine{00075\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34}{SingleMainThermalSubZoom}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 7,\ }
+\DoxyCodeLine{00076\ \ \ \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137}{SingleMainThermalSubWide}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 8\ \ }
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226}{ThermalPalette}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00083\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0}{WhiteHot}}\ \ =\ 0,\ \ }
+\DoxyCodeLine{00084\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47}{Reserved}}\ \ =\ 1,\ \ }
+\DoxyCodeLine{00085\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d}{Sepia}}\ \ \ \ \ =\ 2,\ \ }
+\DoxyCodeLine{00086\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915}{Ironbow}}\ \ \ =\ 3,\ \ }
+\DoxyCodeLine{00087\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c}{Rainbow}}\ \ \ =\ 4,\ \ }
+\DoxyCodeLine{00088\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9}{Night}}\ \ \ \ \ =\ 5,\ \ }
+\DoxyCodeLine{00089\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181}{Aurora}}\ \ \ \ =\ 6,\ \ }
+\DoxyCodeLine{00090\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf}{RedHot}}\ \ \ \ =\ 7,\ \ }
+\DoxyCodeLine{00091\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab}{Jungle}}\ \ \ \ =\ 8,\ \ }
+\DoxyCodeLine{00092\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba}{Medical}}\ \ \ =\ 9,\ \ }
+\DoxyCodeLine{00093\ \ \ \ *\ @brief\ Получить\ состояние\ обратной\ связи\ о\ функции}
+\DoxyCodeLine{00094\ \ \ \ *\ @\textcolor{keywordflow}{return}\ Структура\ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{FunctionFeedbackInfoState}}}
+\DoxyCodeLine{00095\ \ \ \ */}
+\DoxyCodeLine{00096\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{FunctionFeedbackInfoState}}\ getFunctionFeedbackInfoState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678}{BlackHot}}\ \ =\ 10,\ }
+\DoxyCodeLine{00099\ \ \ \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e}{GloryHot}}\ \ =\ 11\ \ }
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288d}{ThermalGain}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00106\ \ \ \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef}{Low}}\ \ =\ 0,\ }
+\DoxyCodeLine{00107\ \ \ \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35}{High}}\ =\ 1\ \ }
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1Version}{Version}}\ \{}
+\DoxyCodeLine{00114\ \ \ uint8\_t\ \doxymbox{\hyperlink{structsiyi_1_1Version_a15dbf8594973acb4662228c76e2bbd15}{major}}\ =\ 0;\ }
+\DoxyCodeLine{00115\ \ \ uint8\_t\ \doxymbox{\hyperlink{structsiyi_1_1Version_aebb342ef5e625683045329b5575ee2c4}{minor}}\ =\ 0;\ }
+\DoxyCodeLine{00116\ \ \ uint8\_t\ \doxymbox{\hyperlink{structsiyi_1_1Version_ae4df89c79941d91e8fa55092a9a25991}{patch}}\ =\ 0;\ }
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1FirmwareVersion}{FirmwareVersion}}\ \{}
+\DoxyCodeLine{00123\ \ \ \doxymbox{\hyperlink{structsiyi_1_1Version}{Version}}\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersion_af36dde12441196342ff01701c458a73b}{camera}};\ }
+\DoxyCodeLine{00124\ \ \ \doxymbox{\hyperlink{structsiyi_1_1Version}{Version}}\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersion_a9fc43a351c599d8aa1376191606e3382}{gimbal}};\ }
+\DoxyCodeLine{00125\ \ \ \doxymbox{\hyperlink{structsiyi_1_1Version}{Version}}\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersion_a7fd5b5bc598f37a93da6de0111577587}{zoom}};\ \ \ }
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{FirmwareVersionState}}\ \{}
+\DoxyCodeLine{00132\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState_a7bb7c43635b60f4ad25b14022ea05e44}{meta}};\ }
+\DoxyCodeLine{00133\ \ \ std::optional<FirmwareVersion>\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState_ad4f419de0987dcc8ac04bc6d691edb7d}{value}};\ }
+\DoxyCodeLine{00134\ \};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1HardwareID}{HardwareID}}\ \{}
+\DoxyCodeLine{00140\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1HardwareID_a19a0cd14a55d9ba341c742d5acb865f4}{id}};\ \ \ }
+\DoxyCodeLine{00141\ \ \ std::string\ \doxymbox{\hyperlink{structsiyi_1_1HardwareID_a4b81c7ce09438954d65b41b0da9272f4}{name}};\ }
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{HardwareIDState}}\ \{}
+\DoxyCodeLine{00148\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1HardwareIDState_ac63fb72a1ce6aaf8b75b5204655fecef}{meta}};\ }
+\DoxyCodeLine{00149\ \ \ std::optional<HardwareID>\ \doxymbox{\hyperlink{structsiyi_1_1HardwareIDState_aa00d7995a8c3fa688c26c8ec4978c0ff}{value}};\ }
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00155\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalAngle}{GimbalAngle}}\ \{}
+\DoxyCodeLine{00156\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngle_a0d08a42ef0f31c9ab80952b60f6a22d8}{yaw}};\ \ \ }
+\DoxyCodeLine{00157\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngle_a4c22f316c8c784a4cdc146b37cae6928}{pitch}};\ }
+\DoxyCodeLine{00158\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngle_aca0eb37957bb43fec469d655bd75c118}{roll}};\ \ }
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{GimbalAngleState}}\ \{}
+\DoxyCodeLine{00165\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState_ab8a13b4204fc9a3fef8208eb525c1ba0}{meta}};\ }
+\DoxyCodeLine{00166\ \ \ std::optional<GimbalAngle>\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState_acb4d8cafe41437a2c529c31ef79bbc9a}{value}};\ }
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeed}{GimbalRotateSpeed}}\ \{}
+\DoxyCodeLine{00173\ \ \ int16\_t\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeed_a0356c5a4c31b1159a9034b8b0ad6d1aa}{yaw}};\ \ \ }
+\DoxyCodeLine{00174\ \ \ int16\_t\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeed_a3f8cb0c6cb1abdd7914061d15ee23cf7}{pitch}};\ }
+\DoxyCodeLine{00175\ \ \ int16\_t\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeed_ad836f23960ce9794d41f4fa1c612a386}{roll}};\ \ }
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{GimbalRotateSpeedState}}\ \{}
+\DoxyCodeLine{00182\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState_aba091268b4b5f6da395c527996e85e72}{meta}};\ }
+\DoxyCodeLine{00183\ \ \ std::optional<GimbalRotateSpeed>\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState_a3b8bcf4bb2be25812f18a848b178245c}{value}};\ }
+\DoxyCodeLine{00184\ \};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{GimbalModeState}}\ \{}
+\DoxyCodeLine{00190\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalModeState_a38a961e4a1cdcce0c2f2b9d6fd50760e}{meta}};\ }
+\DoxyCodeLine{00191\ \ \ std::optional<GimbalMode>\ \doxymbox{\hyperlink{structsiyi_1_1GimbalModeState_a2d0e98dea5e88c28a6dc22a6d96b24b7}{value}};\ }
+\DoxyCodeLine{00192\ \};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{MountingDirectionState}}\ \{}
+\DoxyCodeLine{00198\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState_abd6f73f1a44945da3267b62b1b62ef93}{meta}};\ }
+\DoxyCodeLine{00199\ \ \ std::optional<MountingDirection>\ \doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState_ad3fd0d92047680f0feb39a98d61735ae}{value}};\ }
+\DoxyCodeLine{00200\ \};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfo}{GimbalConfigInfo}}\ \{}
+\DoxyCodeLine{00206\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfo_aab515e7f7fdc59147f86cdb3937db74f}{hdrEnabled}};\ }
+\DoxyCodeLine{00207\ \ \ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1}{RecordingStatus}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfo_a15449a2c1072a2f1a24e4dd7a3fb8773}{recordingStatus}};\ }
+\DoxyCodeLine{00208\ \};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{GimbalConfigInfoState}}\ \{}
+\DoxyCodeLine{00214\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState_aa726995d2ec40ddde0c2eccd50bb86e8}{meta}};\ }
+\DoxyCodeLine{00215\ \ \ std::optional<GimbalConfigInfo>\ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState_a3817827adf366cca616bc4a9bb4786ec}{value}};\ }
+\DoxyCodeLine{00216\ \};}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00221\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{FunctionFeedbackInfoState}}\ \{}
+\DoxyCodeLine{00222\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState_a7508f06ffc4e42d991b20000410f882c}{meta}};\ }
+\DoxyCodeLine{00223\ \ \ std::optional<FunctionFeedbackType>\ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState_a52fcd5cd8306e9720eae9aed69795d0a}{value}};\ }
+\DoxyCodeLine{00224\ \};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00229\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{CurrentZoomState}}\ \{}
+\DoxyCodeLine{00230\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState_aad3116e82e817d1213749d6ff1e84c63}{meta}};\ }
+\DoxyCodeLine{00231\ \ \ std::optional<float>\ \doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState_a1a519419e9f6a36c29904a5940807117}{value}};\ }
+\DoxyCodeLine{00232\ \};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00237\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{MaxZoomState}}\ \{}
+\DoxyCodeLine{00238\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1MaxZoomState_aacc061c16a974fdc230295c5d6a53371}{meta}};\ }
+\DoxyCodeLine{00239\ \ \ std::optional<float>\ \doxymbox{\hyperlink{structsiyi_1_1MaxZoomState_ac76cb4efa500a8e33a9f261f77e9d756}{value}};\ }
+\DoxyCodeLine{00240\ \};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{GimbalCameraImageModeState}}\ \{}
+\DoxyCodeLine{00246\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState_ae0009ea0682c8d156d6c212bd83473e0}{meta}};\ }
+\DoxyCodeLine{00247\ \ \ std::optional<GimbalCameraImageMode>\ \doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState_a428d0dfe6e56a3f80fec6645500fad01}{value}};\ }
+\DoxyCodeLine{00248\ \};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00253\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1RangefinderData}{RangefinderData}}\ \{}
+\DoxyCodeLine{00254\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderData_aba83d67038f0b4fa4ff870017c8386b0}{laserEnabled}};\ \ \ }
+\DoxyCodeLine{00255\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderData_a657bde8b24dc1e96a78e92e1b8a458ff}{distanceM}};\ \ \ \ \ }
+\DoxyCodeLine{00256\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderData_a8ebc3171451b6e78c1c0e43da31e84ed}{targetLatDeg}};\ }
+\DoxyCodeLine{00257\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderData_aedcf74daf6e911c7c4a27249199a0617}{targetLonDeg}};\ }
+\DoxyCodeLine{00258\ \};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1RangefinderDataState}{RangefinderDataState}}\ \{}
+\DoxyCodeLine{00264\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderDataState_a8484d7ed8e30db5c53b200aad1c6df62}{meta}};\ }
+\DoxyCodeLine{00265\ \ \ std::optional<RangefinderData>\ \doxymbox{\hyperlink{structsiyi_1_1RangefinderDataState_a921a44be7d0014223fe02c7c5d1cf001}{value}};\ }
+\DoxyCodeLine{00266\ \};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00271\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalPaletteState}{ThermalPaletteState}}\ \{}
+\DoxyCodeLine{00272\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPaletteState_a4b80c937233854a6afbba667033cce98}{meta}};\ }
+\DoxyCodeLine{00273\ \ \ std::optional<ThermalPalette>\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPaletteState_a1efa9c0f54cbe62d6634a1d5fb96cbdb}{value}};\ }
+\DoxyCodeLine{00274\ \};}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00279\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalGainState}{ThermalGainState}}\ \{}
+\DoxyCodeLine{00280\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalGainState_acfaf89557979dbad8921c4493b88adc7}{meta}};\ }
+\DoxyCodeLine{00281\ \ \ std::optional<ThermalGain>\ \doxymbox{\hyperlink{structsiyi_1_1ThermalGainState_abb348392e904e1845aecde7f57e136fa}{value}};\ }
+\DoxyCodeLine{00282\ \};}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00287\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurement}{ThermalPointMeasurement}}\ \{}
+\DoxyCodeLine{00288\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurement_a6d7eab9532c61bc8791024c69f9d36a0}{x}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00289\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurement_ac409a7a54c49bd8781506d26ba682ba4}{y}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00290\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurement_a39f9e34879239aaf49d7c3de617b2699}{temperatureC}};\ \ }
+\DoxyCodeLine{00291\ \};}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00296\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurementState}{ThermalPointMeasurementState}}\ \{}
+\DoxyCodeLine{00297\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurementState_a4eca3854ecc806c172afca6b4a8bc0f5}{meta}};\ }
+\DoxyCodeLine{00298\ \ \ std::optional<ThermalPointMeasurement>\ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurementState_a53c151609ea249165107541bd81513d3}{value}};\ }
+\DoxyCodeLine{00299\ \};}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00304\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement}{ThermalAreaMeasurement}}\ \{}
+\DoxyCodeLine{00305\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a0e848e94d0956e4258a529cc3f81f1a7}{startX}};\ \ \ }
+\DoxyCodeLine{00306\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a12e119ffb52dad25d048653a71ac5c92}{startY}};\ \ \ }
+\DoxyCodeLine{00307\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_aaf9bb046f359b94fd6292fd8790cae72}{endX}};\ \ \ \ \ }
+\DoxyCodeLine{00308\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a356312cd435cd57a54dcb4dbfa241a52}{endY}};\ \ \ \ \ }
+\DoxyCodeLine{00309\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a6ca94c46cff8c0c0d27a7659aadfc393}{maxTempC}};\ \ \ \ }
+\DoxyCodeLine{00310\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a313beb2630d4b15a2067b5c1245b84ec}{minTempC}};\ \ \ \ }
+\DoxyCodeLine{00311\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a467b6ce45c97f6bd60b8ae7b16e6f200}{maxX}};\ \ \ \ \ }
+\DoxyCodeLine{00312\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a0dd44de05dd34fba8af813e8492a0eb2}{maxY}};\ \ \ \ \ }
+\DoxyCodeLine{00313\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a9174876b033e492d6e71e63f63fe4865}{minX}};\ \ \ \ \ }
+\DoxyCodeLine{00314\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement_a7f6c091ca20767c53a192b6daf9be55f}{minY}};\ \ \ \ \ }
+\DoxyCodeLine{00315\ \};}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00320\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurementState}{ThermalAreaMeasurementState}}\ \{}
+\DoxyCodeLine{00321\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurementState_abaf0c16a684d939ae6ce2eeda165c23a}{meta}};\ }
+\DoxyCodeLine{00322\ \ \ std::optional<ThermalAreaMeasurement>\ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurementState_aacb89f5a8ae8bf31d244c32ac2add267}{value}};\ }
+\DoxyCodeLine{00323\ \};}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00328\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement}{ThermalFullFrameMeasurement}}\ \{}
+\DoxyCodeLine{00329\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_ab43ef4ab6145192e56edfc6225995e0f}{maxTempC}};\ }
+\DoxyCodeLine{00330\ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_a64838a9a8ff7988d34fcbf6229f80939}{minTempC}};\ }
+\DoxyCodeLine{00331\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_a425230c480b9671b654be6ce598cc32a}{maxX}};\ \ \ \ }
+\DoxyCodeLine{00332\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_aa54cbc281775651c662a3a5f58c3fa7e}{maxY}};\ \ \ \ }
+\DoxyCodeLine{00333\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_a08a43a1e2e5002f167b6d62a12ecb3c8}{minX}};\ \ \ \ }
+\DoxyCodeLine{00334\ \ \ uint16\_t\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement_ae41c8ee38bd68663d446987cf99e5164}{minY}};\ \ \ \ }
+\DoxyCodeLine{00335\ \};}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00340\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurementState}{ThermalFullFrameMeasurementState}}\ \{}
+\DoxyCodeLine{00341\ \ \ \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{StateMeta}}\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurementState_a749b926f780d57d6a7cd954d62f7d2cf}{meta}};\ }
+\DoxyCodeLine{00342\ \ \ std::optional<ThermalFullFrameMeasurement>\ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurementState_ac9acfc35b97f879307f045848e749e58}{value}};\ }
+\DoxyCodeLine{00343\ \};}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00350\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structsiyi_1_1SiyiState}{SiyiState}}\ \{}
+\DoxyCodeLine{00351\ \ \ \textcolor{comment}{//\ Device\ info}}
+\DoxyCodeLine{00352\ \ \ \doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{HardwareIDState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a54c36b6541f153cc2a47ec7a265e4864}{hardware}};\ }
+\DoxyCodeLine{00353\ \ \ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{FirmwareVersionState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a6244ad6df914d4ffde6b2500f6102819}{firmware}};\ }
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \textcolor{comment}{//\ Gimbal}}
+\DoxyCodeLine{00356\ \ \ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{GimbalAngleState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_af3d78a705dc9c45a5662eba84d3ddd02}{gimbalAngle}};\ }
+\DoxyCodeLine{00357\ \ \ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{GimbalRotateSpeedState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_aae7ed65806c284a9e87510d0012288d3}{gimbalRotateSpeed}};\ }
+\DoxyCodeLine{00358\ \ \ \doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{GimbalModeState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_acea08d9fc435117424d7d586c02971e6}{gimbalMode}};\ }
+\DoxyCodeLine{00359\ \ \ \doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{MountingDirectionState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a5c6f85441c54052641b2a5725d6b2358}{mountingDirection}};\ }
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \textcolor{comment}{//\ Camera\ (cmd\ 0x09,\ 0x0A,\ 0x0F,\ 0x12)}}
+\DoxyCodeLine{00362\ \ \ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{GimbalConfigInfoState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a2ebcdad7689acd2ff345112032ed23b4}{gimbalConfigInfo}};\ }
+\DoxyCodeLine{00363\ \ \ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{FunctionFeedbackInfoState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_add5cf06cc4b5700548fed6a295c141d9}{functionFeedbackInfo}};\ }
+\DoxyCodeLine{00364\ \ \ \doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{CurrentZoomState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a5cdbf4fcb6680c89f47917b8c7d4e7d8}{currentZoom}};\ }
+\DoxyCodeLine{00365\ \ \ \doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{MaxZoomState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a9957e1de8ad88deb588a254490a60f2b}{maxZoom}};\ }
+\DoxyCodeLine{00366\ \ \ \doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{GimbalCameraImageModeState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_aaa4bd783e08dd83c9e720c470bb3df92}{imageType}};\ }
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \ \ \textcolor{comment}{//\ Rangefinder\ (cmd\ 0x14)}}
+\DoxyCodeLine{00369\ \ \ \doxymbox{\hyperlink{structsiyi_1_1RangefinderDataState}{RangefinderDataState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a6e8a57e560cfa4857c9f2b9039bd9bba}{rangefinder}};\ }
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \textcolor{comment}{//\ Thermal\ (cmd\ 0x1A,\ 0x1B,\ temperature\ measurements)}}
+\DoxyCodeLine{00372\ \ \ \doxymbox{\hyperlink{structsiyi_1_1ThermalPaletteState}{ThermalPaletteState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a7f2530b7229618b2a1ac7ea42d6aa2a6}{thermalPalette}};\ }
+\DoxyCodeLine{00373\ \ \ \doxymbox{\hyperlink{structsiyi_1_1ThermalGainState}{ThermalGainState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a0faa17f89462384ec2f5c5bce719a5d6}{thermalGain}};\ }
+\DoxyCodeLine{00374\ \ \ \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurementState}{ThermalPointMeasurementState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a3b0e6e278624ab876aa3e7e1d49c83c7}{thermalPointMeasurement}};\ }
+\DoxyCodeLine{00375\ \ \ \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurementState}{ThermalAreaMeasurementState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_aa86e250d9ceff94df6f4cd6e3573fada}{thermalAreaMeasurement}};\ }
+\DoxyCodeLine{00376\ \ \ \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurementState}{ThermalFullFrameMeasurementState}}\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState_a97da9775bba954fdcee56bec3b991b29}{thermalFullFrameMeasurement}};\ }
+\DoxyCodeLine{00377\ \};}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \}\ \ \textcolor{comment}{//\ namespace\ siyi}}
+
+\end{DoxyCode}

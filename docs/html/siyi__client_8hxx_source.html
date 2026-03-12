@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>siyi-sdk: Исходный файл /home/shlyapin/Projects/siyi-sdk/include/siyi-sdk/siyi_client.hxx</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">siyi-sdk
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('siyi__client_8hxx_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">siyi_client.hxx</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="siyi__client_8hxx.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="state_8hxx.html">siyi-sdk/state.hxx</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;siyi-sdk/protocol.hxx&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>siyi {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">   18</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">DataStreamHz</a> : uint8_t {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23">   19</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23">HzOFF</a> = 0, </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3">   20</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3">Hz2</a>   = 1, </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9">   21</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9">Hz4</a>   = 2, </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd">   22</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd">Hz5</a>   = 3, </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d">   23</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d">Hz10</a>  = 4, </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e">   24</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e">Hz20</a>  = 5, </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed">   25</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed">Hz50</a>  = 6, </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf">   26</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf">Hz100</a> = 7  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">   32</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">ZoomDirection</a> : int8_t {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03">   33</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03">ZoomOut</a> = -1, </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481">   34</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481">Stop</a>    = 0,  </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f">   35</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f">ZoomIn</a>  = 1   </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">   41</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">FocusDirection</a> : int8_t {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea">   42</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea">FocusNear</a> = -1, </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481">   43</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481">Stop</a>      = 0,  </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc">   44</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc">FocusFar</a>  = 1   </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">   50</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">PhotoRecordAction</a> : uint8_t {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af">   51</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af">TakePhoto</a>           = 0, </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c">   52</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c">ToggleRecord</a>        = 2, </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf">   53</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf">SwitchLockMode</a>      = 3, </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e">   54</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e">SwitchFollowMode</a>    = 4, </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7">   55</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7">SwitchFpvMode</a>       = 5, </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc">   56</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc">SetVideoHdmi</a>        = 6, </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1">   57</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1">SetVideoCvbs</a>        = 7, </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c">   58</a></span>  <a class="code hl_enumvalue" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c">TurnOffVideoOutput</a>  = 8  </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="};">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html">   66</a></span><span class="keyword">class </span><a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">   73</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::string_view adress = protocol::DEFAULT_IP_ADDRESS, </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    uint16_t port = protocol::DEFAULT_PORT</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a436ea2f38cbb117eabc1571951c20591">   81</a></span>  <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a436ea2f38cbb117eabc1571951c20591">~SiyiClient</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>(<span class="keyword">const</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>(<a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp; operator=(<a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a>&amp;&amp;) noexcept;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#abc7ab30679ab81cee27fb2a1b28e1ae7">   93</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#abc7ab30679ab81cee27fb2a1b28e1ae7">requestGimbalCameraFirmwareVersion</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a7577005004844db69353298645494169">   99</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a7577005004844db69353298645494169">requestGimbalCameraHardwareID</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a5f03336dc73b7f037ffed0afb0ee1bf8">  105</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a5f03336dc73b7f037ffed0afb0ee1bf8">requestGimbalCameraPresentWorkingMode</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#aea6f5eec83e4736b29f0906ffea0f67f">  113</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aea6f5eec83e4736b29f0906ffea0f67f">setAutoFocus</a>(uint16_t touch_x, uint16_t touch_y);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a516ca726581c53e223dc6064d5c5b419">  120</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a516ca726581c53e223dc6064d5c5b419">setManualZoomAndAutoFocus</a>(<a class="code hl_enumeration" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">ZoomDirection</a> direction);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a8af12c2dcb3f7ccfa78874b5da3cdf7f">  127</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a8af12c2dcb3f7ccfa78874b5da3cdf7f">setAbsoluteZoomAndAutoFocus</a>(<span class="keywordtype">float</span> zoom);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ad96bee682539870df20ea49824403f2f">  133</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ad96bee682539870df20ea49824403f2f">requestMaxZoomValue</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a0a94011bb506f8a668d5086314f3e27f">  139</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a0a94011bb506f8a668d5086314f3e27f">requestCurrentZoomValue</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a3619a82e40e4e375f69c8da21327525d">  146</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a3619a82e40e4e375f69c8da21327525d">setManualFocus</a>(<a class="code hl_enumeration" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">FocusDirection</a> direction);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#aadf61d3a5c582aee56d2a5b28f15c4e8">  154</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aadf61d3a5c582aee56d2a5b28f15c4e8">setGimbalRotation</a>(int8_t yawSpeed, int8_t pitchSpeed);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a9676d123b6c402370fc147dc73770a2f">  160</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a9676d123b6c402370fc147dc73770a2f">setCenter</a>();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a8ec3c2127d87213a413cca82506abd8f">  166</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a8ec3c2127d87213a413cca82506abd8f">requestGimbalConfigInfo</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a1542769dc0c861aac76fe017cbbefec5">  173</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a1542769dc0c861aac76fe017cbbefec5">photoAndRecord</a>(<a class="code hl_enumeration" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">PhotoRecordAction</a> action); <span class="comment">// TODO(shlyapin): Разобраться с этой командой</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#af08efc09e31c6b3f09560bfd39d09158">  179</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#af08efc09e31c6b3f09560bfd39d09158">requestGimbalAttitude</a>();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ab50bc1f1f54d74c5135ab6e5521ed598">  187</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ab50bc1f1f54d74c5135ab6e5521ed598">setControlAngleToGimbal</a>(<span class="keywordtype">float</span> yaw, <span class="keywordtype">float</span> pitch);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a730d36d5a354911c957b333ac3477c35">  193</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a730d36d5a354911c957b333ac3477c35">requestGimbalCameraImageMode</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ac8aa09122f12fa7dfa7710fa3c99ad20">  200</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ac8aa09122f12fa7dfa7710fa3c99ad20">setImageModeToGimbalCamera</a>(<a class="code hl_enumeration" href="state_8hxx.html#aeee0a5916cac5e729e7aaa24c9686cb9">GimbalCameraImageMode</a> type);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ad15d99e2970c9dec0e1c498bbceed378">  207</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ad15d99e2970c9dec0e1c498bbceed378">requestDataStream</a>(<a class="code hl_enumeration" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">DataStreamHz</a> hz);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#afac35c6d68569a2ae38387ec1acb3a85">  213</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1SiyiState.html">SiyiState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#afac35c6d68569a2ae38387ec1acb3a85">getState</a>() const;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a003a13525d24e1194c4d81aab49c6543">  219</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1FirmwareVersionState.html">FirmwareVersionState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a003a13525d24e1194c4d81aab49c6543">getFirmwareVersionState</a>() const;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ae5ef24038960c1d14ed2e7442fc1f2fe">  225</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1HardwareIDState.html">HardwareIDState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ae5ef24038960c1d14ed2e7442fc1f2fe">getHardwareIDState</a>() const;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a11ac7f858c5ac6421fd1f2fef85ea063">  231</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1GimbalAngleState.html">GimbalAngleState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a11ac7f858c5ac6421fd1f2fef85ea063">getGimbalAngleState</a>() const;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a1be4e6cc39f312253737374a634f3c14">  237</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1GimbalRotateSpeedState.html">GimbalRotateSpeedState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a1be4e6cc39f312253737374a634f3c14">getGimbalRotateSpeedState</a>() const;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a8155a01fd048c7572e657a7445193718">  243</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1GimbalModeState.html">GimbalModeState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a8155a01fd048c7572e657a7445193718">getGimbalModeState</a>() const;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#aab77a2f3e7b01f1bf418e970510876d8">  249</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1MountingDirectionState.html">MountingDirectionState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#aab77a2f3e7b01f1bf418e970510876d8">getMountingDirectionState</a>() const;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a3f9aadfb5b49282452cde2dd4e0af597">  255</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1GimbalConfigInfoState.html">GimbalConfigInfoState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a3f9aadfb5b49282452cde2dd4e0af597">getGimbalConfigInfoState</a>() const;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#ac06d0c19e39d675a314b918cc0faa9f1">  261</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1FunctionFeedbackInfoState.html">FunctionFeedbackInfoState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#ac06d0c19e39d675a314b918cc0faa9f1">getFunctionFeedbackInfoState</a>() const;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a70493fdd9d9af2bca1c1debf7815f8f8">  267</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1CurrentZoomState.html">CurrentZoomState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a70493fdd9d9af2bca1c1debf7815f8f8">getCurrentZoomState</a>() const;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a21666f6b61f39bc11b03b2bf238975e3">  273</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1MaxZoomState.html">MaxZoomState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a21666f6b61f39bc11b03b2bf238975e3">getMaxZoomState</a>() const;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="classsiyi_1_1SiyiClient.html#a5863856a9e228b81c69bb6689a44129e">  279</a></span>  [[nodiscard]] <a class="code hl_struct" href="structsiyi_1_1GimbalCameraImageModeState.html">GimbalCameraImageModeState</a> <a class="code hl_function" href="classsiyi_1_1SiyiClient.html#a5863856a9e228b81c69bb6689a44129e">getGimbalCameraImageModeState</a>() const;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>private:</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  class Impl;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  std::unique_ptr&lt;Impl&gt; impl_;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>};</div>
+</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>} <span class="comment">// namespace siyi</span></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a003a13525d24e1194c4d81aab49c6543"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a003a13525d24e1194c4d81aab49c6543">siyi::SiyiClient::getFirmwareVersionState</a></div><div class="ttdeci">FirmwareVersionState getFirmwareVersionState() const</div><div class="ttdoc">Получить состояние версии прошивки</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a0a94011bb506f8a668d5086314f3e27f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a0a94011bb506f8a668d5086314f3e27f">siyi::SiyiClient::requestCurrentZoomValue</a></div><div class="ttdeci">bool requestCurrentZoomValue()</div><div class="ttdoc">Запросить текущее значение зума</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a11ac7f858c5ac6421fd1f2fef85ea063"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a11ac7f858c5ac6421fd1f2fef85ea063">siyi::SiyiClient::getGimbalAngleState</a></div><div class="ttdeci">GimbalAngleState getGimbalAngleState() const</div><div class="ttdoc">Получить состояние углов подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a1542769dc0c861aac76fe017cbbefec5"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a1542769dc0c861aac76fe017cbbefec5">siyi::SiyiClient::photoAndRecord</a></div><div class="ttdeci">bool photoAndRecord(PhotoRecordAction action)</div><div class="ttdoc">Выполнить действие с фото или видео</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a1be4e6cc39f312253737374a634f3c14"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a1be4e6cc39f312253737374a634f3c14">siyi::SiyiClient::getGimbalRotateSpeedState</a></div><div class="ttdeci">GimbalRotateSpeedState getGimbalRotateSpeedState() const</div><div class="ttdoc">Получить состояние скорости вращения подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a21666f6b61f39bc11b03b2bf238975e3"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a21666f6b61f39bc11b03b2bf238975e3">siyi::SiyiClient::getMaxZoomState</a></div><div class="ttdeci">MaxZoomState getMaxZoomState() const</div><div class="ttdoc">Получить максимальное значение zoom.</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a3619a82e40e4e375f69c8da21327525d"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a3619a82e40e4e375f69c8da21327525d">siyi::SiyiClient::setManualFocus</a></div><div class="ttdeci">bool setManualFocus(FocusDirection direction)</div><div class="ttdoc">Установить направление изменения фокусировки</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a3f9aadfb5b49282452cde2dd4e0af597"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a3f9aadfb5b49282452cde2dd4e0af597">siyi::SiyiClient::getGimbalConfigInfoState</a></div><div class="ttdeci">GimbalConfigInfoState getGimbalConfigInfoState() const</div><div class="ttdoc">Получить состояние информации о конфигурации подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a436ea2f38cbb117eabc1571951c20591"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a436ea2f38cbb117eabc1571951c20591">siyi::SiyiClient::~SiyiClient</a></div><div class="ttdeci">~SiyiClient()</div><div class="ttdoc">Деструктор.</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a516ca726581c53e223dc6064d5c5b419"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a516ca726581c53e223dc6064d5c5b419">siyi::SiyiClient::setManualZoomAndAutoFocus</a></div><div class="ttdeci">bool setManualZoomAndAutoFocus(ZoomDirection direction)</div><div class="ttdoc">Установить направление изменения zoom и автофокус</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a5863856a9e228b81c69bb6689a44129e"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a5863856a9e228b81c69bb6689a44129e">siyi::SiyiClient::getGimbalCameraImageModeState</a></div><div class="ttdeci">GimbalCameraImageModeState getGimbalCameraImageModeState() const</div><div class="ttdoc">Получить состояние режима изображения камеры</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a5f03336dc73b7f037ffed0afb0ee1bf8"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a5f03336dc73b7f037ffed0afb0ee1bf8">siyi::SiyiClient::requestGimbalCameraPresentWorkingMode</a></div><div class="ttdeci">bool requestGimbalCameraPresentWorkingMode()</div><div class="ttdoc">Запросить текущий рабочий режим подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a70493fdd9d9af2bca1c1debf7815f8f8"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a70493fdd9d9af2bca1c1debf7815f8f8">siyi::SiyiClient::getCurrentZoomState</a></div><div class="ttdeci">CurrentZoomState getCurrentZoomState() const</div><div class="ttdoc">Получить текущее значение zoom.</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a730d36d5a354911c957b333ac3477c35"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a730d36d5a354911c957b333ac3477c35">siyi::SiyiClient::requestGimbalCameraImageMode</a></div><div class="ttdeci">bool requestGimbalCameraImageMode()</div><div class="ttdoc">Запросить режим изображения камеры</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a7577005004844db69353298645494169"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a7577005004844db69353298645494169">siyi::SiyiClient::requestGimbalCameraHardwareID</a></div><div class="ttdeci">bool requestGimbalCameraHardwareID()</div><div class="ttdoc">Запросить аппаратный ID.</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a8155a01fd048c7572e657a7445193718"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a8155a01fd048c7572e657a7445193718">siyi::SiyiClient::getGimbalModeState</a></div><div class="ttdeci">GimbalModeState getGimbalModeState() const</div><div class="ttdoc">Получить состояние режима работы подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a8af12c2dcb3f7ccfa78874b5da3cdf7f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a8af12c2dcb3f7ccfa78874b5da3cdf7f">siyi::SiyiClient::setAbsoluteZoomAndAutoFocus</a></div><div class="ttdeci">bool setAbsoluteZoomAndAutoFocus(float zoom)</div><div class="ttdoc">Установить абсолютное значение зума и автофокус</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a8ec3c2127d87213a413cca82506abd8f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a8ec3c2127d87213a413cca82506abd8f">siyi::SiyiClient::requestGimbalConfigInfo</a></div><div class="ttdeci">bool requestGimbalConfigInfo()</div><div class="ttdoc">Запросить информацию о конфигурации подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_a9676d123b6c402370fc147dc73770a2f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#a9676d123b6c402370fc147dc73770a2f">siyi::SiyiClient::setCenter</a></div><div class="ttdeci">bool setCenter()</div><div class="ttdoc">Центрировать подвес</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_aa86cb00e82f7a93c0f031c271eeb2220"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#aa86cb00e82f7a93c0f031c271eeb2220">siyi::SiyiClient::SiyiClient</a></div><div class="ttdeci">SiyiClient(std::string_view adress=protocol::DEFAULT_IP_ADDRESS, uint16_t port=protocol::DEFAULT_PORT)</div><div class="ttdoc">Конструктор с указанием адреса и порта (по умолчанию 192.168.144.25:37260).</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_aab77a2f3e7b01f1bf418e970510876d8"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#aab77a2f3e7b01f1bf418e970510876d8">siyi::SiyiClient::getMountingDirectionState</a></div><div class="ttdeci">MountingDirectionState getMountingDirectionState() const</div><div class="ttdoc">Получить состояние об ориентации подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_aadf61d3a5c582aee56d2a5b28f15c4e8"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#aadf61d3a5c582aee56d2a5b28f15c4e8">siyi::SiyiClient::setGimbalRotation</a></div><div class="ttdeci">bool setGimbalRotation(int8_t yawSpeed, int8_t pitchSpeed)</div><div class="ttdoc">Установить скорость вращения подвеса</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ab50bc1f1f54d74c5135ab6e5521ed598"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ab50bc1f1f54d74c5135ab6e5521ed598">siyi::SiyiClient::setControlAngleToGimbal</a></div><div class="ttdeci">bool setControlAngleToGimbal(float yaw, float pitch)</div><div class="ttdoc">Установить углы подвеса (точность до 0.1 градуса).</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_abc7ab30679ab81cee27fb2a1b28e1ae7"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#abc7ab30679ab81cee27fb2a1b28e1ae7">siyi::SiyiClient::requestGimbalCameraFirmwareVersion</a></div><div class="ttdeci">bool requestGimbalCameraFirmwareVersion()</div><div class="ttdoc">Запросить версию прошивки</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ac06d0c19e39d675a314b918cc0faa9f1"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ac06d0c19e39d675a314b918cc0faa9f1">siyi::SiyiClient::getFunctionFeedbackInfoState</a></div><div class="ttdeci">FunctionFeedbackInfoState getFunctionFeedbackInfoState() const</div><div class="ttdoc">Получить состояние обратной связи о функции</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ac8aa09122f12fa7dfa7710fa3c99ad20"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ac8aa09122f12fa7dfa7710fa3c99ad20">siyi::SiyiClient::setImageModeToGimbalCamera</a></div><div class="ttdeci">bool setImageModeToGimbalCamera(GimbalCameraImageMode type)</div><div class="ttdoc">Установить режим изображения камеры</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ad15d99e2970c9dec0e1c498bbceed378"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ad15d99e2970c9dec0e1c498bbceed378">siyi::SiyiClient::requestDataStream</a></div><div class="ttdeci">bool requestDataStream(DataStreamHz hz)</div><div class="ttdoc">Запросить поток данных с определенной частотой</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ad96bee682539870df20ea49824403f2f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ad96bee682539870df20ea49824403f2f">siyi::SiyiClient::requestMaxZoomValue</a></div><div class="ttdeci">bool requestMaxZoomValue()</div><div class="ttdoc">Запросить максимальное значение зума</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_ae5ef24038960c1d14ed2e7442fc1f2fe"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#ae5ef24038960c1d14ed2e7442fc1f2fe">siyi::SiyiClient::getHardwareIDState</a></div><div class="ttdeci">HardwareIDState getHardwareIDState() const</div><div class="ttdoc">Получить состояние аппаратного ID.</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_aea6f5eec83e4736b29f0906ffea0f67f"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#aea6f5eec83e4736b29f0906ffea0f67f">siyi::SiyiClient::setAutoFocus</a></div><div class="ttdeci">bool setAutoFocus(uint16_t touch_x, uint16_t touch_y)</div><div class="ttdoc">Установить автофокус по координатам</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_af08efc09e31c6b3f09560bfd39d09158"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#af08efc09e31c6b3f09560bfd39d09158">siyi::SiyiClient::requestGimbalAttitude</a></div><div class="ttdeci">bool requestGimbalAttitude()</div><div class="ttdoc">Запросить данные о подвесе (текущие углы, скорость вращения).</div></div>
+<div class="ttc" id="aclasssiyi_1_1SiyiClient_html_afac35c6d68569a2ae38387ec1acb3a85"><div class="ttname"><a href="classsiyi_1_1SiyiClient.html#afac35c6d68569a2ae38387ec1acb3a85">siyi::SiyiClient::getState</a></div><div class="ttdeci">SiyiState getState() const</div><div class="ttdoc">Получить полное состояние камеры</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_a59337c9556a031f67e87fccb850cd657"><div class="ttname"><a href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">siyi::ZoomDirection</a></div><div class="ttdeci">ZoomDirection</div><div class="ttdoc">Направление зума</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:32</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481"><div class="ttname"><a href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481">siyi::ZoomDirection::Stop</a></div><div class="ttdeci">@ Stop</div><div class="ttdoc">Остановить</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:34</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03"><div class="ttname"><a href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03">siyi::ZoomDirection::ZoomOut</a></div><div class="ttdeci">@ ZoomOut</div><div class="ttdoc">Уменьшить зум</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:33</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f"><div class="ttname"><a href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f">siyi::ZoomDirection::ZoomIn</a></div><div class="ttdeci">@ ZoomIn</div><div class="ttdoc">Увеличить зум</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:35</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">siyi::DataStreamHz</a></div><div class="ttdeci">DataStreamHz</div><div class="ttdoc">Частота отправки данных телеметрии</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:18</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf">siyi::DataStreamHz::Hz100</a></div><div class="ttdeci">@ Hz100</div><div class="ttdoc">100 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:26</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed">siyi::DataStreamHz::Hz50</a></div><div class="ttdeci">@ Hz50</div><div class="ttdoc">50 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:25</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e">siyi::DataStreamHz::Hz20</a></div><div class="ttdeci">@ Hz20</div><div class="ttdoc">20 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:24</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23">siyi::DataStreamHz::HzOFF</a></div><div class="ttdeci">@ HzOFF</div><div class="ttdoc">Отключить отправку</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:19</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3">siyi::DataStreamHz::Hz2</a></div><div class="ttdeci">@ Hz2</div><div class="ttdoc">2 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:20</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd">siyi::DataStreamHz::Hz5</a></div><div class="ttdeci">@ Hz5</div><div class="ttdoc">5 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:22</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d">siyi::DataStreamHz::Hz10</a></div><div class="ttdeci">@ Hz10</div><div class="ttdoc">10 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:23</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9"><div class="ttname"><a href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9">siyi::DataStreamHz::Hz4</a></div><div class="ttdeci">@ Hz4</div><div class="ttdoc">4 Гц</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:21</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">siyi::PhotoRecordAction</a></div><div class="ttdeci">PhotoRecordAction</div><div class="ttdoc">Действия с фото и видео</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:50</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af">siyi::PhotoRecordAction::TakePhoto</a></div><div class="ttdeci">@ TakePhoto</div><div class="ttdoc">Сделать фото</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:51</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1">siyi::PhotoRecordAction::SetVideoCvbs</a></div><div class="ttdeci">@ SetVideoCvbs</div><div class="ttdoc">Вывод видео через CVBS.</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:57</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7">siyi::PhotoRecordAction::SwitchFpvMode</a></div><div class="ttdeci">@ SwitchFpvMode</div><div class="ttdoc">Переключить в режим FPV.</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:55</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc">siyi::PhotoRecordAction::SetVideoHdmi</a></div><div class="ttdeci">@ SetVideoHdmi</div><div class="ttdoc">Вывод видео через HDMI.</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:56</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c">siyi::PhotoRecordAction::TurnOffVideoOutput</a></div><div class="ttdeci">@ TurnOffVideoOutput</div><div class="ttdoc">Отключить видеовыход</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:58</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c">siyi::PhotoRecordAction::ToggleRecord</a></div><div class="ttdeci">@ ToggleRecord</div><div class="ttdoc">Начать/остановить запись видео</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:52</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf">siyi::PhotoRecordAction::SwitchLockMode</a></div><div class="ttdeci">@ SwitchLockMode</div><div class="ttdoc">Переключить в режим Lock.</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:53</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e"><div class="ttname"><a href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e">siyi::PhotoRecordAction::SwitchFollowMode</a></div><div class="ttdeci">@ SwitchFollowMode</div><div class="ttdoc">Переключить в режим Follow.</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:54</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_af9eafaafd8d6962acdb113f9558bbf5b"><div class="ttname"><a href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">siyi::FocusDirection</a></div><div class="ttdeci">FocusDirection</div><div class="ttdoc">Направление фокусировки</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:41</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea"><div class="ttname"><a href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea">siyi::FocusDirection::FocusNear</a></div><div class="ttdeci">@ FocusNear</div><div class="ttdoc">Ближе</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:42</div></div>
+<div class="ttc" id="asiyi__client_8hxx_html_af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc"><div class="ttname"><a href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc">siyi::FocusDirection::FocusFar</a></div><div class="ttdeci">@ FocusFar</div><div class="ttdoc">Дальше</div><div class="ttdef"><b>Определения</b> siyi_client.hxx:44</div></div>
+<div class="ttc" id="astate_8hxx_html"><div class="ttname"><a href="state_8hxx.html">state.hxx</a></div><div class="ttdoc">Определения структур состояния и перечислений для камер SIYI.</div></div>
+<div class="ttc" id="astate_8hxx_html_aeee0a5916cac5e729e7aaa24c9686cb9"><div class="ttname"><a href="state_8hxx.html#aeee0a5916cac5e729e7aaa24c9686cb9">siyi::GimbalCameraImageMode</a></div><div class="ttdeci">GimbalCameraImageMode</div><div class="ttdoc">Режим изображения камеры</div><div class="ttdef"><b>Определения</b> state.hxx:67</div></div>
+<div class="ttc" id="astructsiyi_1_1CurrentZoomState_html"><div class="ttname"><a href="structsiyi_1_1CurrentZoomState.html">siyi::CurrentZoomState</a></div><div class="ttdoc">Состояние текущего значения зума</div><div class="ttdef"><b>Определения</b> state.hxx:229</div></div>
+<div class="ttc" id="astructsiyi_1_1FirmwareVersionState_html"><div class="ttname"><a href="structsiyi_1_1FirmwareVersionState.html">siyi::FirmwareVersionState</a></div><div class="ttdoc">Состояние версии прошивки</div><div class="ttdef"><b>Определения</b> state.hxx:131</div></div>
+<div class="ttc" id="astructsiyi_1_1FunctionFeedbackInfoState_html"><div class="ttname"><a href="structsiyi_1_1FunctionFeedbackInfoState.html">siyi::FunctionFeedbackInfoState</a></div><div class="ttdoc">Состояние обратной связи о функции</div><div class="ttdef"><b>Определения</b> state.hxx:221</div></div>
+<div class="ttc" id="astructsiyi_1_1GimbalAngleState_html"><div class="ttname"><a href="structsiyi_1_1GimbalAngleState.html">siyi::GimbalAngleState</a></div><div class="ttdoc">Состояние углов подвеса</div><div class="ttdef"><b>Определения</b> state.hxx:164</div></div>
+<div class="ttc" id="astructsiyi_1_1GimbalCameraImageModeState_html"><div class="ttname"><a href="structsiyi_1_1GimbalCameraImageModeState.html">siyi::GimbalCameraImageModeState</a></div><div class="ttdoc">Состояние режима изображения камеры</div><div class="ttdef"><b>Определения</b> state.hxx:245</div></div>
+<div class="ttc" id="astructsiyi_1_1GimbalConfigInfoState_html"><div class="ttname"><a href="structsiyi_1_1GimbalConfigInfoState.html">siyi::GimbalConfigInfoState</a></div><div class="ttdoc">Состояние информации о конфигурации подвеса</div><div class="ttdef"><b>Определения</b> state.hxx:213</div></div>
+<div class="ttc" id="astructsiyi_1_1GimbalModeState_html"><div class="ttname"><a href="structsiyi_1_1GimbalModeState.html">siyi::GimbalModeState</a></div><div class="ttdoc">Состояние режима подвеса</div><div class="ttdef"><b>Определения</b> state.hxx:189</div></div>
+<div class="ttc" id="astructsiyi_1_1GimbalRotateSpeedState_html"><div class="ttname"><a href="structsiyi_1_1GimbalRotateSpeedState.html">siyi::GimbalRotateSpeedState</a></div><div class="ttdoc">Состояние скорости вращения подвеса</div><div class="ttdef"><b>Определения</b> state.hxx:181</div></div>
+<div class="ttc" id="astructsiyi_1_1HardwareIDState_html"><div class="ttname"><a href="structsiyi_1_1HardwareIDState.html">siyi::HardwareIDState</a></div><div class="ttdoc">Состояние аппаратного ID.</div><div class="ttdef"><b>Определения</b> state.hxx:147</div></div>
+<div class="ttc" id="astructsiyi_1_1MaxZoomState_html"><div class="ttname"><a href="structsiyi_1_1MaxZoomState.html">siyi::MaxZoomState</a></div><div class="ttdoc">Состояние максимального значения зума</div><div class="ttdef"><b>Определения</b> state.hxx:237</div></div>
+<div class="ttc" id="astructsiyi_1_1MountingDirectionState_html"><div class="ttname"><a href="structsiyi_1_1MountingDirectionState.html">siyi::MountingDirectionState</a></div><div class="ttdoc">Состояние направления монтажа</div><div class="ttdef"><b>Определения</b> state.hxx:197</div></div>
+<div class="ttc" id="astructsiyi_1_1SiyiState_html"><div class="ttname"><a href="structsiyi_1_1SiyiState.html">siyi::SiyiState</a></div><div class="ttdoc">Полное состояние камеры SIYI.</div><div class="ttdef"><b>Определения</b> state.hxx:350</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><b>siyi-sdk</b></li><li class="navelem"><a href="siyi__client_8hxx.html">siyi_client.hxx</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

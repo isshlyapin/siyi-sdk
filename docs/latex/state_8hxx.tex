@@ -1,0 +1,456 @@
+\doxysection{Файл /\+home/\+shlyapin/\+\+Projects/\+siyi-\/sdk/\+include/\+siyi-\/sdk/\+state.hxx}
+\hypertarget{state_8hxx}{}\label{state_8hxx}\index{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/state.hxx@{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/state.hxx}}
+
+
+Определения структур состояния и перечислений для камер SIYI.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$optional$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1StateMeta}{siyi::\+\+State\+Meta}}
+\begin{DoxyCompactList}\small\item\em Метаинформация о состоянии \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1Version}{siyi::\+\+Version}}
+\begin{DoxyCompactList}\small\item\em Версия компонента. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersion}{siyi::\+\+Firmware\+Version}}
+\begin{DoxyCompactList}\small\item\em Версии прошивок \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{siyi::\+\+Firmware\+Version\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние версии прошивки \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1HardwareID}{siyi::\+\+Hardware\+ID}}
+\begin{DoxyCompactList}\small\item\em Аппаратный ID. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{siyi::\+\+Hardware\+IDState}}
+\begin{DoxyCompactList}\small\item\em Состояние аппаратного ID. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalAngle}{siyi::\+\+Gimbal\+Angle}}
+\begin{DoxyCompactList}\small\item\em Углы подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{siyi::\+\+Gimbal\+Angle\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние углов подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeed}{siyi::\+\+Gimbal\+Rotate\+Speed}}
+\begin{DoxyCompactList}\small\item\em Скорость вращения подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{siyi::\+\+Gimbal\+Rotate\+Speed\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние скорости вращения подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{siyi::\+\+Gimbal\+Mode\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние режима подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{siyi::\+\+Mounting\+Direction\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние направления монтажа \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfo}{siyi::\+\+Gimbal\+Config\+Info}}
+\begin{DoxyCompactList}\small\item\em Информация о конфигурации подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{siyi::\+\+Gimbal\+Config\+Info\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние информации о конфигурации подвеса \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{siyi::\+\+Function\+Feedback\+Info\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние обратной связи о функции \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{siyi::\+\+Current\+Zoom\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние текущего значения зума \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{siyi::\+\+Max\+Zoom\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние максимального значения зума \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{siyi::\+\+Gimbal\+Camera\+Image\+Mode\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние режима изображения камеры \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1RangefinderData}{siyi::\+\+Rangefinder\+Data}}
+\begin{DoxyCompactList}\small\item\em Данные с дальномера \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1RangefinderDataState}{siyi::\+\+Rangefinder\+Data\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние данных с дальномера \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalPaletteState}{siyi::\+\+Thermal\+Palette\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние тепловой палитры \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalGainState}{siyi::\+\+Thermal\+Gain\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние усиления тепловизора \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurement}{siyi::\+\+Thermal\+Point\+Measurement}}
+\begin{DoxyCompactList}\small\item\em Измерение температуры в точке \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalPointMeasurementState}{siyi::\+\+Thermal\+Point\+Measurement\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние измерения температуры в точке \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurement}{siyi::\+\+Thermal\+Area\+Measurement}}
+\begin{DoxyCompactList}\small\item\em Измерение температуры в области \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalAreaMeasurementState}{siyi::\+\+Thermal\+Area\+Measurement\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние измерения температуры в области \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurement}{siyi::\+\+Thermal\+Full\+Frame\+Measurement}}
+\begin{DoxyCompactList}\small\item\em Измерение температуры по всему кадру \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1ThermalFullFrameMeasurementState}{siyi::\+\+Thermal\+Full\+Frame\+Measurement\+State}}
+\begin{DoxyCompactList}\small\item\em Состояние измерения температуры по всему кадру \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structsiyi_1_1SiyiState}{siyi::\+\+Siyi\+State}}
+\begin{DoxyCompactList}\small\item\em Полное состояние камеры SIYI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{state_8hxx_a2d204ed9f2339eafe0add2b877fadb76}\label{state_8hxx_a2d204ed9f2339eafe0add2b877fadb76} 
+using {\bfseries siyi::\+\+Steady\+Time\+Point} = std::\+chrono::\+steady\+\_\+clock::\+time\+\_\+point
+\begin{DoxyCompactList}\small\item\em Псевдоним для точки времени steady\+\_\+clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ff}{siyi::\+\+Gimbal\+Mode}} :\+ uint8\+\_\+t \{ \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659}{Lock}} = 0
+, \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd}{Follow}} = 1
+, \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756}{Fpv}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Режим работы подвеса \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14}{siyi::\+\+Mounting\+Direction}} :\+ uint8\+\_\+t \{ \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}} = 0x01
+, \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903}{Upside\+Down}} = 0x02
+ \}
+\begin{DoxyCompactList}\small\item\em Ориентация подвеса \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1}{siyi::\+\+Recording\+Status}} :\+ uint8\+\_\+t \{ \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36}{Off}} = 0
+, \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3}{On}} = 1
+, \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e}{No\+Sd\+Card}} = 2
+, \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92}{Data\+Loss}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Статус записи видео \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3}{siyi::\+\+Function\+Feedback\+Type}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a}{Photo\+Success}} = 0
+, \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42}{Photo\+Fail}} = 1
+, \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42}{Hdr\+On}} = 2
+, \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753}{Hdr\+Off}} = 3
+, \newline
+\doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61}{Record\+Fail}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Тип обратной связи о функции \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{siyi::\+\+Gimbal\+Camera\+Image\+Mode}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa}{Split\+Main\+Zoom\+And\+Thermal\+Sub\+Wide\+Angle}} = 0
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9}{Split\+Main\+Wide\+Angle\+And\+Thermal\+Sub\+Zoom}} = 1
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9}{Split\+Main\+Zoom\+And\+Wide\+Angle\+Sub\+Thermal}} = 2
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86}{Single\+Main\+Zoom\+Sub\+Thermal}} = 3
+, \newline
+\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e}{Single\+Main\+Zoom\+Sub\+Wide\+Angle}} = 4
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f}{Single\+Main\+Wide\+Angle\+Sub\+Thermal}} = 5
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171}{Single\+Main\+Wide\+Angle\+Sub\+Zoom}} = 6
+, \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34}{Single\+Main\+Thermal\+Sub\+Zoom}} = 7
+, \newline
+\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137}{Single\+Main\+Thermal\+Sub\+Wide}} = 8
+ \}
+\begin{DoxyCompactList}\small\item\em Режим изображения камеры \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226}{siyi::\+\+Thermal\+Palette}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0}{White\+Hot}} = 0
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47}{Reserved}} = 1
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d}{Sepia}} = 2
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915}{Ironbow}} = 3
+, \newline
+\doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c}{Rainbow}} = 4
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9}{Night}} = 5
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181}{Aurora}} = 6
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf}{Red\+Hot}} = 7
+, \newline
+\doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab}{Jungle}} = 8
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba}{Medical}} = 9
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678}{Black\+Hot}} = 10
+, \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e}{Glory\+Hot}} = 11
+ \}
+\begin{DoxyCompactList}\small\item\em Тепловая палитра \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288d}{siyi::\+\+Thermal\+Gain}} :\+ uint8\+\_\+t \{ \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef}{Low}} = 0
+, \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35}{High}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Усиление тепловизора \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Определения структур состояния и перечислений для камер SIYI. 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{state_8hxx_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3}\index{state.hxx@{state.hxx}!FunctionFeedbackType@{FunctionFeedbackType}}
+\index{FunctionFeedbackType@{FunctionFeedbackType}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{FunctionFeedbackType}{FunctionFeedbackType}}
+{\footnotesize\ttfamily \label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3} 
+enum class \doxymbox{\hyperlink{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3}{siyi::\+\+Function\+Feedback\+Type}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Тип обратной связи о функции 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PhotoSuccess@{PhotoSuccess}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!PhotoSuccess@{PhotoSuccess}}
+}\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a}\label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a} 
+Photo\+Success&Фото сделано успешно \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PhotoFail@{PhotoFail}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!PhotoFail@{PhotoFail}}
+}\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42}\label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42} 
+Photo\+Fail&Ошибка при фото \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HdrOn@{HdrOn}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!HdrOn@{HdrOn}}
+}\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42}\label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42} 
+Hdr\+On&HDR включен \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HdrOff@{HdrOff}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!HdrOff@{HdrOff}}
+}\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753}\label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753} 
+Hdr\+Off&HDR выключен \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RecordFail@{RecordFail}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!RecordFail@{RecordFail}}
+}\Hypertarget{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61}\label{state_8hxx_aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61} 
+Record\+Fail&Ошибка записи \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}\index{state.hxx@{state.hxx}!GimbalCameraImageMode@{GimbalCameraImageMode}}
+\index{GimbalCameraImageMode@{GimbalCameraImageMode}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{GimbalCameraImageMode}{GimbalCameraImageMode}}
+{\footnotesize\ttfamily \label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9} 
+enum class \doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{siyi::\+\+Gimbal\+Camera\+Image\+Mode}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Режим изображения камеры 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SplitMainZoomAndThermalSubWideAngle@{SplitMainZoomAndThermalSubWideAngle}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SplitMainZoomAndThermalSubWideAngle@{SplitMainZoomAndThermalSubWideAngle}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa} 
+Split\+Main\+Zoom\+And\+Thermal\+Sub\+Wide\+Angle&Разделенный:\+ основное -\/ зум, дополнительное -\/ тепловизор (широкоугольный). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SplitMainWideAngleAndThermalSubZoom@{SplitMainWideAngleAndThermalSubZoom}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SplitMainWideAngleAndThermalSubZoom@{SplitMainWideAngleAndThermalSubZoom}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9} 
+Split\+Main\+Wide\+Angle\+And\+Thermal\+Sub\+Zoom&Разделенный:\+ основное -\/ широкоугольный, дополнительное -\/ тепловизор (зум). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SplitMainZoomAndWideAngleSubThermal@{SplitMainZoomAndWideAngleSubThermal}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SplitMainZoomAndWideAngleSubThermal@{SplitMainZoomAndWideAngleSubThermal}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9} 
+Split\+Main\+Zoom\+And\+Wide\+Angle\+Sub\+Thermal&Разделенный:\+ основное -\/ зум, дополнительное -\/ широкоугольный (тепловизор). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainZoomSubThermal@{SingleMainZoomSubThermal}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainZoomSubThermal@{SingleMainZoomSubThermal}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86} 
+Single\+Main\+Zoom\+Sub\+Thermal&Один:\+ основное -\/ зум, дополнительное -\/ тепловизор \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainZoomSubWideAngle@{SingleMainZoomSubWideAngle}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainZoomSubWideAngle@{SingleMainZoomSubWideAngle}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e} 
+Single\+Main\+Zoom\+Sub\+Wide\+Angle&Один:\+ основное -\/ зум, дополнительное -\/ широкоугольный \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainWideAngleSubThermal@{SingleMainWideAngleSubThermal}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainWideAngleSubThermal@{SingleMainWideAngleSubThermal}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f} 
+Single\+Main\+Wide\+Angle\+Sub\+Thermal&Один:\+ основное -\/ широкоугольный, дополнительное -\/ тепловизор \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainWideAngleSubZoom@{SingleMainWideAngleSubZoom}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainWideAngleSubZoom@{SingleMainWideAngleSubZoom}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171} 
+Single\+Main\+Wide\+Angle\+Sub\+Zoom&Один:\+ основное -\/ широкоугольный, дополнительное -\/ зум \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainThermalSubZoom@{SingleMainThermalSubZoom}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainThermalSubZoom@{SingleMainThermalSubZoom}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34} 
+Single\+Main\+Thermal\+Sub\+Zoom&Один:\+ основное -\/ тепловизор, дополнительное -\/ зум \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SingleMainThermalSubWide@{SingleMainThermalSubWide}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!SingleMainThermalSubWide@{SingleMainThermalSubWide}}
+}\Hypertarget{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137}\label{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137} 
+Single\+Main\+Thermal\+Sub\+Wide&Один:\+ основное -\/ тепловизор, дополнительное -\/ широкоугольный \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_a97108296a6cbb28ee14538d122bba5ff}\index{state.hxx@{state.hxx}!GimbalMode@{GimbalMode}}
+\index{GimbalMode@{GimbalMode}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{GimbalMode}{GimbalMode}}
+{\footnotesize\ttfamily \label{state_8hxx_a97108296a6cbb28ee14538d122bba5ff} 
+enum class \doxymbox{\hyperlink{state_8hxx_a97108296a6cbb28ee14538d122bba5ff}{siyi::\+\+Gimbal\+Mode}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Режим работы подвеса 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Lock@{Lock}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Lock@{Lock}}
+}\Hypertarget{state_8hxx_a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659}\label{state_8hxx_a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659} 
+Lock&Режим блокировки \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Follow@{Follow}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Follow@{Follow}}
+}\Hypertarget{state_8hxx_a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd}\label{state_8hxx_a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd} 
+Follow&Режим следования \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fpv@{Fpv}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Fpv@{Fpv}}
+}\Hypertarget{state_8hxx_a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756}\label{state_8hxx_a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756} 
+Fpv&Режим от первого лица \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14}\index{state.hxx@{state.hxx}!MountingDirection@{MountingDirection}}
+\index{MountingDirection@{MountingDirection}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{MountingDirection}{MountingDirection}}
+{\footnotesize\ttfamily \label{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14} 
+enum class \doxymbox{\hyperlink{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14}{siyi::\+\+Mounting\+Direction}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Ориентация подвеса 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Normal@{Normal}}
+}\Hypertarget{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0}\label{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0} 
+Normal&Обычное \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpsideDown@{UpsideDown}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!UpsideDown@{UpsideDown}}
+}\Hypertarget{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903}\label{state_8hxx_a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903} 
+Upside\+Down&Вверх ногами \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1}\index{state.hxx@{state.hxx}!RecordingStatus@{RecordingStatus}}
+\index{RecordingStatus@{RecordingStatus}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{RecordingStatus}{RecordingStatus}}
+{\footnotesize\ttfamily \label{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1} 
+enum class \doxymbox{\hyperlink{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1}{siyi::\+\+Recording\+Status}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Статус записи видео 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Off@{Off}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Off@{Off}}
+}\Hypertarget{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36}\label{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36} 
+Off&Запись выключена \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{On@{On}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!On@{On}}
+}\Hypertarget{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3}\label{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3} 
+On&Запись включена \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoSdCard@{NoSdCard}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!NoSdCard@{NoSdCard}}
+}\Hypertarget{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e}\label{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e} 
+No\+Sd\+Card&SD-\/карта отсутствует \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DataLoss@{DataLoss}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!DataLoss@{DataLoss}}
+}\Hypertarget{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92}\label{state_8hxx_aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92} 
+Data\+Loss&Потеря данных \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_af6291918482f4841b6bed9d4aebb288d}\index{state.hxx@{state.hxx}!ThermalGain@{ThermalGain}}
+\index{ThermalGain@{ThermalGain}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{ThermalGain}{ThermalGain}}
+{\footnotesize\ttfamily \label{state_8hxx_af6291918482f4841b6bed9d4aebb288d} 
+enum class \doxymbox{\hyperlink{state_8hxx_af6291918482f4841b6bed9d4aebb288d}{siyi::\+\+Thermal\+Gain}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Усиление тепловизора 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Low@{Low}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Low@{Low}}
+}\Hypertarget{state_8hxx_af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef}\label{state_8hxx_af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef} 
+Low&Низкое \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{High@{High}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!High@{High}}
+}\Hypertarget{state_8hxx_af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35}\label{state_8hxx_af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35} 
+High&Высокое \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226}\index{state.hxx@{state.hxx}!ThermalPalette@{ThermalPalette}}
+\index{ThermalPalette@{ThermalPalette}!state.hxx@{state.hxx}}
+\doxysubsubsection{\texorpdfstring{ThermalPalette}{ThermalPalette}}
+{\footnotesize\ttfamily \label{state_8hxx_ac7dced743227f9f153c1841fa931a226} 
+enum class \doxymbox{\hyperlink{state_8hxx_ac7dced743227f9f153c1841fa931a226}{siyi::\+\+Thermal\+Palette}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Тепловая палитра 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WhiteHot@{WhiteHot}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!WhiteHot@{WhiteHot}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0} 
+White\+Hot&Белый горячий \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Reserved@{Reserved}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Reserved@{Reserved}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47} 
+Reserved&Зарезервировано \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sepia@{Sepia}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Sepia@{Sepia}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d} 
+Sepia&Сепия \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ironbow@{Ironbow}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Ironbow@{Ironbow}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915} 
+Ironbow&Железная дуга \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rainbow@{Rainbow}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Rainbow@{Rainbow}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c} 
+Rainbow&Радуга \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Night@{Night}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Night@{Night}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9} 
+Night&Ночь \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aurora@{Aurora}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Aurora@{Aurora}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181} 
+Aurora&Аврора \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RedHot@{RedHot}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!RedHot@{RedHot}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf} 
+Red\+Hot&Красный горячий \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Jungle@{Jungle}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Jungle@{Jungle}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab} 
+Jungle&Джунгли \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Medical@{Medical}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!Medical@{Medical}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba} 
+Medical&Медицинский /\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BlackHot@{BlackHot}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!BlackHot@{BlackHot}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678} 
+Black\+Hot&Черный горячий \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GloryHot@{GloryHot}!state.hxx@{state.hxx}}
+\index{state.hxx@{state.hxx}!GloryHot@{GloryHot}}
+}\Hypertarget{state_8hxx_ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e}\label{state_8hxx_ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e} 
+Glory\+Hot&Славный горячий \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>siyi-sdk: Файл /home/shlyapin/Projects/siyi-sdk/include/siyi-sdk/siyi_client.hxx</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">siyi-sdk
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('siyi__client_8hxx.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл siyi_client.hxx</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Клиент для взаимодействия с камерами SIYI.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;<a class="el" href="state_8hxx_source.html">siyi-sdk/state.hxx</a>&gt;</code><br />
+<code>#include &quot;siyi-sdk/protocol.hxx&quot;</code><br />
+</div>
+<p><a href="siyi__client_8hxx_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:siyi_3A_3ASiyiClient" id="r_siyi_3A_3ASiyiClient"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classsiyi_1_1SiyiClient.html">siyi::SiyiClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Основной класс для управления камерой SIYI.  <a href="classsiyi_1_1SiyiClient.html#details">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ac73f44f2aaaa453898f4e0995b7adb40" id="r_ac73f44f2aaaa453898f4e0995b7adb40"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40">siyi::DataStreamHz</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23">HzOFF</a> = 0
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3">Hz2</a> = 1
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9">Hz4</a> = 2
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd">Hz5</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d">Hz10</a> = 4
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e">Hz20</a> = 5
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed">Hz50</a> = 6
+, <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf">Hz100</a> = 7
+<br />
+ }</td></tr>
+<tr class="memdesc:ac73f44f2aaaa453898f4e0995b7adb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Частота отправки данных телеметрии  <a href="#ac73f44f2aaaa453898f4e0995b7adb40">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a59337c9556a031f67e87fccb850cd657" id="r_a59337c9556a031f67e87fccb850cd657"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a59337c9556a031f67e87fccb850cd657">siyi::ZoomDirection</a> : int8_t { <a class="el" href="#a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03">ZoomOut</a> = -1
+, <a class="el" href="#a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481">Stop</a> = 0
+, <a class="el" href="#a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f">ZoomIn</a> = 1
+ }</td></tr>
+<tr class="memdesc:a59337c9556a031f67e87fccb850cd657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Направление зума  <a href="#a59337c9556a031f67e87fccb850cd657">Подробнее...</a><br /></td></tr>
+<tr class="memitem:af9eafaafd8d6962acdb113f9558bbf5b" id="r_af9eafaafd8d6962acdb113f9558bbf5b"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#af9eafaafd8d6962acdb113f9558bbf5b">siyi::FocusDirection</a> : int8_t { <a class="el" href="#af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea">FocusNear</a> = -1
+, <a class="el" href="#af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481">Stop</a> = 0
+, <a class="el" href="#af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc">FocusFar</a> = 1
+ }</td></tr>
+<tr class="memdesc:af9eafaafd8d6962acdb113f9558bbf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Направление фокусировки  <a href="#af9eafaafd8d6962acdb113f9558bbf5b">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aca4427feb4696ea11583f5b15f98c3f2" id="r_aca4427feb4696ea11583f5b15f98c3f2"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2">siyi::PhotoRecordAction</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af">TakePhoto</a> = 0
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c">ToggleRecord</a> = 2
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf">SwitchLockMode</a> = 3
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e">SwitchFollowMode</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7">SwitchFpvMode</a> = 5
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc">SetVideoHdmi</a> = 6
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1">SetVideoCvbs</a> = 7
+, <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c">TurnOffVideoOutput</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:aca4427feb4696ea11583f5b15f98c3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действия с фото и видео  <a href="#aca4427feb4696ea11583f5b15f98c3f2">Подробнее...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Клиент для взаимодействия с камерами SIYI. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="ac73f44f2aaaa453898f4e0995b7adb40" name="ac73f44f2aaaa453898f4e0995b7adb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73f44f2aaaa453898f4e0995b7adb40">&#9670;&#160;</a></span>DataStreamHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ac73f44f2aaaa453898f4e0995b7adb40">siyi::DataStreamHz</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Частота отправки данных телеметрии </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23" name="ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23"></a>HzOFF&#160;</td><td class="fielddoc"><p>Отключить отправку </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3" name="ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3"></a>Hz2&#160;</td><td class="fielddoc"><p>2 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9" name="ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9"></a>Hz4&#160;</td><td class="fielddoc"><p>4 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd" name="ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd"></a>Hz5&#160;</td><td class="fielddoc"><p>5 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d" name="ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d"></a>Hz10&#160;</td><td class="fielddoc"><p>10 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e" name="ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e"></a>Hz20&#160;</td><td class="fielddoc"><p>20 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed" name="ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed"></a>Hz50&#160;</td><td class="fielddoc"><p>50 Гц </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf" name="ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf"></a>Hz100&#160;</td><td class="fielddoc"><p>100 Гц </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="af9eafaafd8d6962acdb113f9558bbf5b" name="af9eafaafd8d6962acdb113f9558bbf5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9eafaafd8d6962acdb113f9558bbf5b">&#9670;&#160;</a></span>FocusDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#af9eafaafd8d6962acdb113f9558bbf5b">siyi::FocusDirection</a> : int8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Направление фокусировки </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea" name="af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea"></a>FocusNear&#160;</td><td class="fielddoc"><p>Ближе </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481" name="af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481"></a>Stop&#160;</td><td class="fielddoc"><p>Остановить </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc" name="af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc"></a>FocusFar&#160;</td><td class="fielddoc"><p>Дальше </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aca4427feb4696ea11583f5b15f98c3f2" name="aca4427feb4696ea11583f5b15f98c3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4427feb4696ea11583f5b15f98c3f2">&#9670;&#160;</a></span>PhotoRecordAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aca4427feb4696ea11583f5b15f98c3f2">siyi::PhotoRecordAction</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Действия с фото и видео </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af" name="aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af"></a>TakePhoto&#160;</td><td class="fielddoc"><p>Сделать фото </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c" name="aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c"></a>ToggleRecord&#160;</td><td class="fielddoc"><p>Начать/остановить запись видео </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf" name="aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf"></a>SwitchLockMode&#160;</td><td class="fielddoc"><p>Переключить в режим Lock. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e" name="aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e"></a>SwitchFollowMode&#160;</td><td class="fielddoc"><p>Переключить в режим Follow. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7" name="aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7"></a>SwitchFpvMode&#160;</td><td class="fielddoc"><p>Переключить в режим FPV. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc" name="aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc"></a>SetVideoHdmi&#160;</td><td class="fielddoc"><p>Вывод видео через HDMI. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1" name="aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1"></a>SetVideoCvbs&#160;</td><td class="fielddoc"><p>Вывод видео через CVBS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c" name="aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c"></a>TurnOffVideoOutput&#160;</td><td class="fielddoc"><p>Отключить видеовыход </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a59337c9556a031f67e87fccb850cd657" name="a59337c9556a031f67e87fccb850cd657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59337c9556a031f67e87fccb850cd657">&#9670;&#160;</a></span>ZoomDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a59337c9556a031f67e87fccb850cd657">siyi::ZoomDirection</a> : int8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Направление зума </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03" name="a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03"></a>ZoomOut&#160;</td><td class="fielddoc"><p>Уменьшить зум </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481" name="a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481"></a>Stop&#160;</td><td class="fielddoc"><p>Остановить </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f" name="a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f"></a>ZoomIn&#160;</td><td class="fielddoc"><p>Увеличить зум </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><b>siyi-sdk</b></li><li class="navelem"><a href="siyi__client_8hxx.html">siyi_client.hxx</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

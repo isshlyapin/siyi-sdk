@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['takephoto_0',['TakePhoto',['../siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af',1,'siyi']]],
+  ['targetlatdeg_1',['targetLatDeg',['../structsiyi_1_1RangefinderData.html#a8ebc3171451b6e78c1c0e43da31e84ed',1,'siyi::RangefinderData']]],
+  ['targetlondeg_2',['targetLonDeg',['../structsiyi_1_1RangefinderData.html#aedcf74daf6e911c7c4a27249199a0617',1,'siyi::RangefinderData']]],
+  ['temperaturec_3',['temperatureC',['../structsiyi_1_1ThermalPointMeasurement.html#a39f9e34879239aaf49d7c3de617b2699',1,'siyi::ThermalPointMeasurement']]],
+  ['thermalareameasurement_4',['ThermalAreaMeasurement',['../structsiyi_1_1ThermalAreaMeasurement.html',1,'siyi']]],
+  ['thermalareameasurement_5',['thermalAreaMeasurement',['../structsiyi_1_1SiyiState.html#aa86e250d9ceff94df6f4cd6e3573fada',1,'siyi::SiyiState']]],
+  ['thermalareameasurementstate_6',['ThermalAreaMeasurementState',['../structsiyi_1_1ThermalAreaMeasurementState.html',1,'siyi']]],
+  ['thermalfullframemeasurement_7',['ThermalFullFrameMeasurement',['../structsiyi_1_1ThermalFullFrameMeasurement.html',1,'siyi']]],
+  ['thermalfullframemeasurement_8',['thermalFullFrameMeasurement',['../structsiyi_1_1SiyiState.html#a97da9775bba954fdcee56bec3b991b29',1,'siyi::SiyiState']]],
+  ['thermalfullframemeasurementstate_9',['ThermalFullFrameMeasurementState',['../structsiyi_1_1ThermalFullFrameMeasurementState.html',1,'siyi']]],
+  ['thermalgain_10',['ThermalGain',['../state_8hxx.html#af6291918482f4841b6bed9d4aebb288d',1,'siyi']]],
+  ['thermalgain_11',['thermalGain',['../structsiyi_1_1SiyiState.html#a0faa17f89462384ec2f5c5bce719a5d6',1,'siyi::SiyiState']]],
+  ['thermalgainstate_12',['ThermalGainState',['../structsiyi_1_1ThermalGainState.html',1,'siyi']]],
+  ['thermalpalette_13',['ThermalPalette',['../state_8hxx.html#ac7dced743227f9f153c1841fa931a226',1,'siyi']]],
+  ['thermalpalette_14',['thermalPalette',['../structsiyi_1_1SiyiState.html#a7f2530b7229618b2a1ac7ea42d6aa2a6',1,'siyi::SiyiState']]],
+  ['thermalpalettestate_15',['ThermalPaletteState',['../structsiyi_1_1ThermalPaletteState.html',1,'siyi']]],
+  ['thermalpointmeasurement_16',['ThermalPointMeasurement',['../structsiyi_1_1ThermalPointMeasurement.html',1,'siyi']]],
+  ['thermalpointmeasurement_17',['thermalPointMeasurement',['../structsiyi_1_1SiyiState.html#a3b0e6e278624ab876aa3e7e1d49c83c7',1,'siyi::SiyiState']]],
+  ['thermalpointmeasurementstate_18',['ThermalPointMeasurementState',['../structsiyi_1_1ThermalPointMeasurementState.html',1,'siyi']]],
+  ['togglerecord_19',['ToggleRecord',['../siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c',1,'siyi']]],
+  ['turnoffvideooutput_20',['TurnOffVideoOutput',['../siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c',1,'siyi']]]
+];

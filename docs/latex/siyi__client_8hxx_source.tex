@@ -1,0 +1,134 @@
+\doxysection{siyi\+\_\+client.\+hxx}
+\hypertarget{siyi__client_8hxx_source}{}\label{siyi__client_8hxx_source}\index{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/siyi\_client.hxx@{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/siyi\_client.hxx}}
+\doxymbox{\hyperlink{siyi__client_8hxx}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\doxymbox{\hyperlink{state_8hxx}{siyi-\/sdk/state.hxx}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}siyi-\/sdk/protocol.hxx"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }siyi\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{DataStreamHz}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00019\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23}{HzOFF}}\ =\ 0,\ }
+\DoxyCodeLine{00020\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3}{Hz2}}\ \ \ =\ 1,\ }
+\DoxyCodeLine{00021\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9}{Hz4}}\ \ \ =\ 2,\ }
+\DoxyCodeLine{00022\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd}{Hz5}}\ \ \ =\ 3,\ }
+\DoxyCodeLine{00023\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d}{Hz10}}\ \ =\ 4,\ }
+\DoxyCodeLine{00024\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e}{Hz20}}\ \ =\ 5,\ }
+\DoxyCodeLine{00025\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed}{Hz50}}\ \ =\ 6,\ }
+\DoxyCodeLine{00026\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf}{Hz100}}\ =\ 7\ \ }
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{ZoomDirection}}\ :\ int8\_t\ \{}
+\DoxyCodeLine{00033\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03}{ZoomOut}}\ =\ -\/1,\ }
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481}{Stop}}\ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{00035\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f}{ZoomIn}}\ \ =\ 1\ \ \ }
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{FocusDirection}}\ :\ int8\_t\ \{}
+\DoxyCodeLine{00042\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea}{FocusNear}}\ =\ -\/1,\ }
+\DoxyCodeLine{00043\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481}{Stop}}\ \ \ \ \ \ =\ 0,\ \ }
+\DoxyCodeLine{00044\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc}{FocusFar}}\ \ =\ 1\ \ \ }
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{PhotoRecordAction}}\ :\ uint8\_t\ \{}
+\DoxyCodeLine{00051\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af}{TakePhoto}}\ \ \ \ \ \ \ \ \ \ \ =\ 0,\ }
+\DoxyCodeLine{00052\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c}{ToggleRecord}}\ \ \ \ \ \ \ \ =\ 2,\ }
+\DoxyCodeLine{00053\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf}{SwitchLockMode}}\ \ \ \ \ \ =\ 3,\ }
+\DoxyCodeLine{00054\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e}{SwitchFollowMode}}\ \ \ \ =\ 4,\ }
+\DoxyCodeLine{00055\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7}{SwitchFpvMode}}\ \ \ \ \ \ \ =\ 5,\ }
+\DoxyCodeLine{00056\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc}{SetVideoHdmi}}\ \ \ \ \ \ \ \ =\ 6,\ }
+\DoxyCodeLine{00057\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1}{SetVideoCvbs}}\ \ \ \ \ \ \ \ =\ 7,\ }
+\DoxyCodeLine{00058\ \ \ \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c}{TurnOffVideoOutput}}\ \ =\ 8\ \ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\ \{}
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}(}
+\DoxyCodeLine{00074\ \ \ \ \ std::string\_view\ adress\ =\ protocol::DEFAULT\_IP\_ADDRESS,\ }
+\DoxyCodeLine{00075\ \ \ \ \ uint16\_t\ port\ =\ protocol::DEFAULT\_PORT}
+\DoxyCodeLine{00076\ \ \ );}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a436ea2f38cbb117eabc1571951c20591}{\string~SiyiClient}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00084\ \ \ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&\ operator=(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}(\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&\&)\ noexcept;}
+\DoxyCodeLine{00087\ \ \ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&\ operator=(\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{SiyiClient}}\&\&)\ noexcept;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_abc7ab30679ab81cee27fb2a1b28e1ae7}{requestGimbalCameraFirmwareVersion}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a7577005004844db69353298645494169}{requestGimbalCameraHardwareID}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a5f03336dc73b7f037ffed0afb0ee1bf8}{requestGimbalCameraPresentWorkingMode}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aea6f5eec83e4736b29f0906ffea0f67f}{setAutoFocus}}(uint16\_t\ touch\_x,\ uint16\_t\ touch\_y);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a516ca726581c53e223dc6064d5c5b419}{setManualZoomAndAutoFocus}}(\doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{ZoomDirection}}\ direction);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8af12c2dcb3f7ccfa78874b5da3cdf7f}{setAbsoluteZoomAndAutoFocus}}(\textcolor{keywordtype}{float}\ zoom);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ad96bee682539870df20ea49824403f2f}{requestMaxZoomValue}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a0a94011bb506f8a668d5086314f3e27f}{requestCurrentZoomValue}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a3619a82e40e4e375f69c8da21327525d}{setManualFocus}}(\doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{FocusDirection}}\ direction);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00154\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aadf61d3a5c582aee56d2a5b28f15c4e8}{setGimbalRotation}}(int8\_t\ yawSpeed,\ int8\_t\ pitchSpeed);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a9676d123b6c402370fc147dc73770a2f}{setCenter}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8ec3c2127d87213a413cca82506abd8f}{requestGimbalConfigInfo}}();}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a1542769dc0c861aac76fe017cbbefec5}{photoAndRecord}}(\doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{PhotoRecordAction}}\ action);\ \textcolor{comment}{//\ TODO(shlyapin):\ Разобраться\ с\ этой\ командой}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00179\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_af08efc09e31c6b3f09560bfd39d09158}{requestGimbalAttitude}}();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00187\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ab50bc1f1f54d74c5135ab6e5521ed598}{setControlAngleToGimbal}}(\textcolor{keywordtype}{float}\ yaw,\ \textcolor{keywordtype}{float}\ pitch);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00193\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a730d36d5a354911c957b333ac3477c35}{requestGimbalCameraImageMode}}();}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00200\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ac8aa09122f12fa7dfa7710fa3c99ad20}{setImageModeToGimbalCamera}}(\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{GimbalCameraImageMode}}\ type);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ad15d99e2970c9dec0e1c498bbceed378}{requestDataStream}}(\doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{DataStreamHz}}\ hz);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00213\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1SiyiState}{SiyiState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_afac35c6d68569a2ae38387ec1acb3a85}{getState}}()\ const;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00219\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{FirmwareVersionState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a003a13525d24e1194c4d81aab49c6543}{getFirmwareVersionState}}()\ const;}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00225\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{HardwareIDState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ae5ef24038960c1d14ed2e7442fc1f2fe}{getHardwareIDState}}()\ const;}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00231\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{GimbalAngleState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a11ac7f858c5ac6421fd1f2fef85ea063}{getGimbalAngleState}}()\ const;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00237\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{GimbalRotateSpeedState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a1be4e6cc39f312253737374a634f3c14}{getGimbalRotateSpeedState}}()\ const;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00243\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{GimbalModeState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8155a01fd048c7572e657a7445193718}{getGimbalModeState}}()\ const;}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00249\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{MountingDirectionState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aab77a2f3e7b01f1bf418e970510876d8}{getMountingDirectionState}}()\ const;}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00255\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{GimbalConfigInfoState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a3f9aadfb5b49282452cde2dd4e0af597}{getGimbalConfigInfoState}}()\ const;}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00261\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{FunctionFeedbackInfoState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ac06d0c19e39d675a314b918cc0faa9f1}{getFunctionFeedbackInfoState}}()\ const;}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00267\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{CurrentZoomState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a70493fdd9d9af2bca1c1debf7815f8f8}{getCurrentZoomState}}()\ const;}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00273\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{MaxZoomState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a21666f6b61f39bc11b03b2bf238975e3}{getMaxZoomState}}()\ const;}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00279\ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{GimbalCameraImageModeState}}\ \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a5863856a9e228b81c69bb6689a44129e}{getGimbalCameraImageModeState}}()\ const;}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ private:}
+\DoxyCodeLine{00282\ \ \ class\ Impl;}
+\DoxyCodeLine{00283\ \ \ std::unique\_ptr<Impl>\ impl\_;}
+\DoxyCodeLine{00284\ \};}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \}\ \textcolor{comment}{//\ namespace\ siyi}}
+
+\end{DoxyCode}

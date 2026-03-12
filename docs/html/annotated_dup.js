@@ -1,0 +1,35 @@
+var annotated_dup =
+[
+    [ "siyi", null, [
+      [ "StateMeta", "structsiyi_1_1StateMeta.html", "structsiyi_1_1StateMeta" ],
+      [ "Version", "structsiyi_1_1Version.html", "structsiyi_1_1Version" ],
+      [ "FirmwareVersion", "structsiyi_1_1FirmwareVersion.html", "structsiyi_1_1FirmwareVersion" ],
+      [ "FirmwareVersionState", "structsiyi_1_1FirmwareVersionState.html", "structsiyi_1_1FirmwareVersionState" ],
+      [ "HardwareID", "structsiyi_1_1HardwareID.html", "structsiyi_1_1HardwareID" ],
+      [ "HardwareIDState", "structsiyi_1_1HardwareIDState.html", "structsiyi_1_1HardwareIDState" ],
+      [ "GimbalAngle", "structsiyi_1_1GimbalAngle.html", "structsiyi_1_1GimbalAngle" ],
+      [ "GimbalAngleState", "structsiyi_1_1GimbalAngleState.html", "structsiyi_1_1GimbalAngleState" ],
+      [ "GimbalRotateSpeed", "structsiyi_1_1GimbalRotateSpeed.html", "structsiyi_1_1GimbalRotateSpeed" ],
+      [ "GimbalRotateSpeedState", "structsiyi_1_1GimbalRotateSpeedState.html", "structsiyi_1_1GimbalRotateSpeedState" ],
+      [ "GimbalModeState", "structsiyi_1_1GimbalModeState.html", "structsiyi_1_1GimbalModeState" ],
+      [ "MountingDirectionState", "structsiyi_1_1MountingDirectionState.html", "structsiyi_1_1MountingDirectionState" ],
+      [ "GimbalConfigInfo", "structsiyi_1_1GimbalConfigInfo.html", "structsiyi_1_1GimbalConfigInfo" ],
+      [ "GimbalConfigInfoState", "structsiyi_1_1GimbalConfigInfoState.html", "structsiyi_1_1GimbalConfigInfoState" ],
+      [ "FunctionFeedbackInfoState", "structsiyi_1_1FunctionFeedbackInfoState.html", "structsiyi_1_1FunctionFeedbackInfoState" ],
+      [ "CurrentZoomState", "structsiyi_1_1CurrentZoomState.html", "structsiyi_1_1CurrentZoomState" ],
+      [ "MaxZoomState", "structsiyi_1_1MaxZoomState.html", "structsiyi_1_1MaxZoomState" ],
+      [ "GimbalCameraImageModeState", "structsiyi_1_1GimbalCameraImageModeState.html", "structsiyi_1_1GimbalCameraImageModeState" ],
+      [ "RangefinderData", "structsiyi_1_1RangefinderData.html", "structsiyi_1_1RangefinderData" ],
+      [ "RangefinderDataState", "structsiyi_1_1RangefinderDataState.html", "structsiyi_1_1RangefinderDataState" ],
+      [ "ThermalPaletteState", "structsiyi_1_1ThermalPaletteState.html", "structsiyi_1_1ThermalPaletteState" ],
+      [ "ThermalGainState", "structsiyi_1_1ThermalGainState.html", "structsiyi_1_1ThermalGainState" ],
+      [ "ThermalPointMeasurement", "structsiyi_1_1ThermalPointMeasurement.html", "structsiyi_1_1ThermalPointMeasurement" ],
+      [ "ThermalPointMeasurementState", "structsiyi_1_1ThermalPointMeasurementState.html", "structsiyi_1_1ThermalPointMeasurementState" ],
+      [ "ThermalAreaMeasurement", "structsiyi_1_1ThermalAreaMeasurement.html", "structsiyi_1_1ThermalAreaMeasurement" ],
+      [ "ThermalAreaMeasurementState", "structsiyi_1_1ThermalAreaMeasurementState.html", "structsiyi_1_1ThermalAreaMeasurementState" ],
+      [ "ThermalFullFrameMeasurement", "structsiyi_1_1ThermalFullFrameMeasurement.html", "structsiyi_1_1ThermalFullFrameMeasurement" ],
+      [ "ThermalFullFrameMeasurementState", "structsiyi_1_1ThermalFullFrameMeasurementState.html", "structsiyi_1_1ThermalFullFrameMeasurementState" ],
+      [ "SiyiState", "structsiyi_1_1SiyiState.html", "structsiyi_1_1SiyiState" ],
+      [ "SiyiClient", "classsiyi_1_1SiyiClient.html", "classsiyi_1_1SiyiClient" ]
+    ] ]
+];

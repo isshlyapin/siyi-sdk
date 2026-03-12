@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>siyi-sdk: Файл /home/shlyapin/Projects/siyi-sdk/include/siyi-sdk/state.hxx</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">siyi-sdk
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('state_8hxx.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл state.hxx</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Определения структур состояния и перечислений для камер SIYI.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+</div>
+<p><a href="state_8hxx_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:siyi_3A_3AStateMeta" id="r_siyi_3A_3AStateMeta"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1StateMeta.html">siyi::StateMeta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метаинформация о состоянии  <a href="structsiyi_1_1StateMeta.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AVersion" id="r_siyi_3A_3AVersion"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1Version.html">siyi::Version</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Версия компонента.  <a href="structsiyi_1_1Version.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AFirmwareVersion" id="r_siyi_3A_3AFirmwareVersion"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1FirmwareVersion.html">siyi::FirmwareVersion</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Версии прошивок  <a href="structsiyi_1_1FirmwareVersion.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AFirmwareVersionState" id="r_siyi_3A_3AFirmwareVersionState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1FirmwareVersionState.html">siyi::FirmwareVersionState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние версии прошивки  <a href="structsiyi_1_1FirmwareVersionState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AHardwareID" id="r_siyi_3A_3AHardwareID"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1HardwareID.html">siyi::HardwareID</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Аппаратный ID.  <a href="structsiyi_1_1HardwareID.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AHardwareIDState" id="r_siyi_3A_3AHardwareIDState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1HardwareIDState.html">siyi::HardwareIDState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние аппаратного ID.  <a href="structsiyi_1_1HardwareIDState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalAngle" id="r_siyi_3A_3AGimbalAngle"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalAngle.html">siyi::GimbalAngle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Углы подвеса  <a href="structsiyi_1_1GimbalAngle.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalAngleState" id="r_siyi_3A_3AGimbalAngleState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalAngleState.html">siyi::GimbalAngleState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние углов подвеса  <a href="structsiyi_1_1GimbalAngleState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalRotateSpeed" id="r_siyi_3A_3AGimbalRotateSpeed"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalRotateSpeed.html">siyi::GimbalRotateSpeed</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скорость вращения подвеса  <a href="structsiyi_1_1GimbalRotateSpeed.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalRotateSpeedState" id="r_siyi_3A_3AGimbalRotateSpeedState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalRotateSpeedState.html">siyi::GimbalRotateSpeedState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние скорости вращения подвеса  <a href="structsiyi_1_1GimbalRotateSpeedState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalModeState" id="r_siyi_3A_3AGimbalModeState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalModeState.html">siyi::GimbalModeState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние режима подвеса  <a href="structsiyi_1_1GimbalModeState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AMountingDirectionState" id="r_siyi_3A_3AMountingDirectionState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1MountingDirectionState.html">siyi::MountingDirectionState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние направления монтажа  <a href="structsiyi_1_1MountingDirectionState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalConfigInfo" id="r_siyi_3A_3AGimbalConfigInfo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalConfigInfo.html">siyi::GimbalConfigInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Информация о конфигурации подвеса  <a href="structsiyi_1_1GimbalConfigInfo.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalConfigInfoState" id="r_siyi_3A_3AGimbalConfigInfoState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalConfigInfoState.html">siyi::GimbalConfigInfoState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние информации о конфигурации подвеса  <a href="structsiyi_1_1GimbalConfigInfoState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AFunctionFeedbackInfoState" id="r_siyi_3A_3AFunctionFeedbackInfoState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1FunctionFeedbackInfoState.html">siyi::FunctionFeedbackInfoState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние обратной связи о функции  <a href="structsiyi_1_1FunctionFeedbackInfoState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3ACurrentZoomState" id="r_siyi_3A_3ACurrentZoomState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1CurrentZoomState.html">siyi::CurrentZoomState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние текущего значения зума  <a href="structsiyi_1_1CurrentZoomState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AMaxZoomState" id="r_siyi_3A_3AMaxZoomState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1MaxZoomState.html">siyi::MaxZoomState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние максимального значения зума  <a href="structsiyi_1_1MaxZoomState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AGimbalCameraImageModeState" id="r_siyi_3A_3AGimbalCameraImageModeState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1GimbalCameraImageModeState.html">siyi::GimbalCameraImageModeState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние режима изображения камеры  <a href="structsiyi_1_1GimbalCameraImageModeState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3ARangefinderData" id="r_siyi_3A_3ARangefinderData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1RangefinderData.html">siyi::RangefinderData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные с дальномера  <a href="structsiyi_1_1RangefinderData.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3ARangefinderDataState" id="r_siyi_3A_3ARangefinderDataState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1RangefinderDataState.html">siyi::RangefinderDataState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние данных с дальномера  <a href="structsiyi_1_1RangefinderDataState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalPaletteState" id="r_siyi_3A_3AThermalPaletteState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalPaletteState.html">siyi::ThermalPaletteState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние тепловой палитры  <a href="structsiyi_1_1ThermalPaletteState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalGainState" id="r_siyi_3A_3AThermalGainState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalGainState.html">siyi::ThermalGainState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние усиления тепловизора  <a href="structsiyi_1_1ThermalGainState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalPointMeasurement" id="r_siyi_3A_3AThermalPointMeasurement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalPointMeasurement.html">siyi::ThermalPointMeasurement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Измерение температуры в точке  <a href="structsiyi_1_1ThermalPointMeasurement.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalPointMeasurementState" id="r_siyi_3A_3AThermalPointMeasurementState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalPointMeasurementState.html">siyi::ThermalPointMeasurementState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние измерения температуры в точке  <a href="structsiyi_1_1ThermalPointMeasurementState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalAreaMeasurement" id="r_siyi_3A_3AThermalAreaMeasurement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalAreaMeasurement.html">siyi::ThermalAreaMeasurement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Измерение температуры в области  <a href="structsiyi_1_1ThermalAreaMeasurement.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalAreaMeasurementState" id="r_siyi_3A_3AThermalAreaMeasurementState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalAreaMeasurementState.html">siyi::ThermalAreaMeasurementState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние измерения температуры в области  <a href="structsiyi_1_1ThermalAreaMeasurementState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalFullFrameMeasurement" id="r_siyi_3A_3AThermalFullFrameMeasurement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalFullFrameMeasurement.html">siyi::ThermalFullFrameMeasurement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Измерение температуры по всему кадру  <a href="structsiyi_1_1ThermalFullFrameMeasurement.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3AThermalFullFrameMeasurementState" id="r_siyi_3A_3AThermalFullFrameMeasurementState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1ThermalFullFrameMeasurementState.html">siyi::ThermalFullFrameMeasurementState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние измерения температуры по всему кадру  <a href="structsiyi_1_1ThermalFullFrameMeasurementState.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memitem:siyi_3A_3ASiyiState" id="r_siyi_3A_3ASiyiState"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsiyi_1_1SiyiState.html">siyi::SiyiState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Полное состояние камеры SIYI.  <a href="structsiyi_1_1SiyiState.html#details">Подробнее...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a2d204ed9f2339eafe0add2b877fadb76" id="r_a2d204ed9f2339eafe0add2b877fadb76"><td class="memItemLeft"><a id="a2d204ed9f2339eafe0add2b877fadb76" name="a2d204ed9f2339eafe0add2b877fadb76"></a>
+using&#160;</td><td class="memItemRight"><b>siyi::SteadyTimePoint</b> = std::chrono::steady_clock::time_point</td></tr>
+<tr class="memdesc:a2d204ed9f2339eafe0add2b877fadb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Псевдоним для точки времени steady_clock. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a97108296a6cbb28ee14538d122bba5ff" id="r_a97108296a6cbb28ee14538d122bba5ff"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a97108296a6cbb28ee14538d122bba5ff">siyi::GimbalMode</a> : uint8_t { <a class="el" href="#a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659">Lock</a> = 0
+, <a class="el" href="#a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd">Follow</a> = 1
+, <a class="el" href="#a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756">Fpv</a> = 2
+ }</td></tr>
+<tr class="memdesc:a97108296a6cbb28ee14538d122bba5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Режим работы подвеса  <a href="#a97108296a6cbb28ee14538d122bba5ff">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a9915ea0b58b43a59be867a0aaec47c14" id="r_a9915ea0b58b43a59be867a0aaec47c14"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a9915ea0b58b43a59be867a0aaec47c14">siyi::MountingDirection</a> : uint8_t { <a class="el" href="#a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a> = 0x01
+, <a class="el" href="#a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903">UpsideDown</a> = 0x02
+ }</td></tr>
+<tr class="memdesc:a9915ea0b58b43a59be867a0aaec47c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ориентация подвеса  <a href="#a9915ea0b58b43a59be867a0aaec47c14">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aff346f68dcc9b834bed0ce9839e0f8a1" id="r_aff346f68dcc9b834bed0ce9839e0f8a1"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1">siyi::RecordingStatus</a> : uint8_t { <a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36">Off</a> = 0
+, <a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3">On</a> = 1
+, <a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e">NoSdCard</a> = 2
+, <a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92">DataLoss</a> = 3
+ }</td></tr>
+<tr class="memdesc:aff346f68dcc9b834bed0ce9839e0f8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статус записи видео  <a href="#aff346f68dcc9b834bed0ce9839e0f8a1">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aa8cf13b643acc3a460d68062e6575ab3" id="r_aa8cf13b643acc3a460d68062e6575ab3"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3">siyi::FunctionFeedbackType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a">PhotoSuccess</a> = 0
+, <a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42">PhotoFail</a> = 1
+, <a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42">HdrOn</a> = 2
+, <a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753">HdrOff</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61">RecordFail</a> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:aa8cf13b643acc3a460d68062e6575ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип обратной связи о функции  <a href="#aa8cf13b643acc3a460d68062e6575ab3">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aeee0a5916cac5e729e7aaa24c9686cb9" id="r_aeee0a5916cac5e729e7aaa24c9686cb9"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9">siyi::GimbalCameraImageMode</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa">SplitMainZoomAndThermalSubWideAngle</a> = 0
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9">SplitMainWideAngleAndThermalSubZoom</a> = 1
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9">SplitMainZoomAndWideAngleSubThermal</a> = 2
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86">SingleMainZoomSubThermal</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e">SingleMainZoomSubWideAngle</a> = 4
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f">SingleMainWideAngleSubThermal</a> = 5
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171">SingleMainWideAngleSubZoom</a> = 6
+, <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34">SingleMainThermalSubZoom</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137">SingleMainThermalSubWide</a> = 8
+<br />
+ }</td></tr>
+<tr class="memdesc:aeee0a5916cac5e729e7aaa24c9686cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Режим изображения камеры  <a href="#aeee0a5916cac5e729e7aaa24c9686cb9">Подробнее...</a><br /></td></tr>
+<tr class="memitem:ac7dced743227f9f153c1841fa931a226" id="r_ac7dced743227f9f153c1841fa931a226"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ac7dced743227f9f153c1841fa931a226">siyi::ThermalPalette</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0">WhiteHot</a> = 0
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47">Reserved</a> = 1
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d">Sepia</a> = 2
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915">Ironbow</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="#ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c">Rainbow</a> = 4
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9">Night</a> = 5
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181">Aurora</a> = 6
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf">RedHot</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="#ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab">Jungle</a> = 8
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba">Medical</a> = 9
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678">BlackHot</a> = 10
+, <a class="el" href="#ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e">GloryHot</a> = 11
+<br />
+ }</td></tr>
+<tr class="memdesc:ac7dced743227f9f153c1841fa931a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тепловая палитра  <a href="#ac7dced743227f9f153c1841fa931a226">Подробнее...</a><br /></td></tr>
+<tr class="memitem:af6291918482f4841b6bed9d4aebb288d" id="r_af6291918482f4841b6bed9d4aebb288d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#af6291918482f4841b6bed9d4aebb288d">siyi::ThermalGain</a> : uint8_t { <a class="el" href="#af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef">Low</a> = 0
+, <a class="el" href="#af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35">High</a> = 1
+ }</td></tr>
+<tr class="memdesc:af6291918482f4841b6bed9d4aebb288d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Усиление тепловизора  <a href="#af6291918482f4841b6bed9d4aebb288d">Подробнее...</a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Определения структур состояния и перечислений для камер SIYI. </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="aa8cf13b643acc3a460d68062e6575ab3" name="aa8cf13b643acc3a460d68062e6575ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cf13b643acc3a460d68062e6575ab3">&#9670;&#160;</a></span>FunctionFeedbackType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aa8cf13b643acc3a460d68062e6575ab3">siyi::FunctionFeedbackType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Тип обратной связи о функции </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a" name="aa8cf13b643acc3a460d68062e6575ab3a88a38fd993b9181cee2306becf53399a"></a>PhotoSuccess&#160;</td><td class="fielddoc"><p>Фото сделано успешно </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42" name="aa8cf13b643acc3a460d68062e6575ab3aaf5c056a990df4655dfab9faf9bb6e42"></a>PhotoFail&#160;</td><td class="fielddoc"><p>Ошибка при фото </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42" name="aa8cf13b643acc3a460d68062e6575ab3a47d97ea41f2208998385f3237238af42"></a>HdrOn&#160;</td><td class="fielddoc"><p>HDR включен </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753" name="aa8cf13b643acc3a460d68062e6575ab3add6f9e6c6dd84a03c1290515eca5d753"></a>HdrOff&#160;</td><td class="fielddoc"><p>HDR выключен </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61" name="aa8cf13b643acc3a460d68062e6575ab3a0f1fc601db0f69db524ddcab21407b61"></a>RecordFail&#160;</td><td class="fielddoc"><p>Ошибка записи </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aeee0a5916cac5e729e7aaa24c9686cb9" name="aeee0a5916cac5e729e7aaa24c9686cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee0a5916cac5e729e7aaa24c9686cb9">&#9670;&#160;</a></span>GimbalCameraImageMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aeee0a5916cac5e729e7aaa24c9686cb9">siyi::GimbalCameraImageMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Режим изображения камеры </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa" name="aeee0a5916cac5e729e7aaa24c9686cb9a41e98f38291a72482ba79b0c5f3318aa"></a>SplitMainZoomAndThermalSubWideAngle&#160;</td><td class="fielddoc"><p>Разделенный: основное - зум, дополнительное - тепловизор (широкоугольный). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9" name="aeee0a5916cac5e729e7aaa24c9686cb9a0d61a56aa15d589746af65389de79df9"></a>SplitMainWideAngleAndThermalSubZoom&#160;</td><td class="fielddoc"><p>Разделенный: основное - широкоугольный, дополнительное - тепловизор (зум). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9" name="aeee0a5916cac5e729e7aaa24c9686cb9aef747e291bdfb06ffd9d7e1b2b3990c9"></a>SplitMainZoomAndWideAngleSubThermal&#160;</td><td class="fielddoc"><p>Разделенный: основное - зум, дополнительное - широкоугольный (тепловизор). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86" name="aeee0a5916cac5e729e7aaa24c9686cb9ac723331dd30dc7a465e37614f0759a86"></a>SingleMainZoomSubThermal&#160;</td><td class="fielddoc"><p>Один: основное - зум, дополнительное - тепловизор </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e" name="aeee0a5916cac5e729e7aaa24c9686cb9a0447848f854fdcad7527760dbb95d24e"></a>SingleMainZoomSubWideAngle&#160;</td><td class="fielddoc"><p>Один: основное - зум, дополнительное - широкоугольный </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f" name="aeee0a5916cac5e729e7aaa24c9686cb9af6db2747c1e56ae834b48469644ad94f"></a>SingleMainWideAngleSubThermal&#160;</td><td class="fielddoc"><p>Один: основное - широкоугольный, дополнительное - тепловизор </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171" name="aeee0a5916cac5e729e7aaa24c9686cb9afd173718247d09bbcf7949d491b7f171"></a>SingleMainWideAngleSubZoom&#160;</td><td class="fielddoc"><p>Один: основное - широкоугольный, дополнительное - зум </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34" name="aeee0a5916cac5e729e7aaa24c9686cb9a5de0f2cd9b3f0a806b6a52246be88f34"></a>SingleMainThermalSubZoom&#160;</td><td class="fielddoc"><p>Один: основное - тепловизор, дополнительное - зум </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137" name="aeee0a5916cac5e729e7aaa24c9686cb9a70b7c67e2302d6eea82917f1cb7ca137"></a>SingleMainThermalSubWide&#160;</td><td class="fielddoc"><p>Один: основное - тепловизор, дополнительное - широкоугольный </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a97108296a6cbb28ee14538d122bba5ff" name="a97108296a6cbb28ee14538d122bba5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97108296a6cbb28ee14538d122bba5ff">&#9670;&#160;</a></span>GimbalMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a97108296a6cbb28ee14538d122bba5ff">siyi::GimbalMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Режим работы подвеса </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659" name="a97108296a6cbb28ee14538d122bba5ffab485167c5b0e59d47009a16f90fe2659"></a>Lock&#160;</td><td class="fielddoc"><p>Режим блокировки </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd" name="a97108296a6cbb28ee14538d122bba5ffa3903aab323863bd2e9b68218a7a65ebd"></a>Follow&#160;</td><td class="fielddoc"><p>Режим следования </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756" name="a97108296a6cbb28ee14538d122bba5ffaaf95827f680a6e3a769de15f5a905756"></a>Fpv&#160;</td><td class="fielddoc"><p>Режим от первого лица </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9915ea0b58b43a59be867a0aaec47c14" name="a9915ea0b58b43a59be867a0aaec47c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9915ea0b58b43a59be867a0aaec47c14">&#9670;&#160;</a></span>MountingDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a9915ea0b58b43a59be867a0aaec47c14">siyi::MountingDirection</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ориентация подвеса </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0" name="a9915ea0b58b43a59be867a0aaec47c14a960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc"><p>Обычное </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903" name="a9915ea0b58b43a59be867a0aaec47c14af08af04d07c38567fc6b24634c51f903"></a>UpsideDown&#160;</td><td class="fielddoc"><p>Вверх ногами </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aff346f68dcc9b834bed0ce9839e0f8a1" name="aff346f68dcc9b834bed0ce9839e0f8a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff346f68dcc9b834bed0ce9839e0f8a1">&#9670;&#160;</a></span>RecordingStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aff346f68dcc9b834bed0ce9839e0f8a1">siyi::RecordingStatus</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Статус записи видео </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36" name="aff346f68dcc9b834bed0ce9839e0f8a1ad15305d7a4e34e02489c74a5ef542f36"></a>Off&#160;</td><td class="fielddoc"><p>Запись выключена </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3" name="aff346f68dcc9b834bed0ce9839e0f8a1a521c36a31c2762741cf0f8890cbe05e3"></a>On&#160;</td><td class="fielddoc"><p>Запись включена </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e" name="aff346f68dcc9b834bed0ce9839e0f8a1a453810183ad66fdba3c29a0488fa541e"></a>NoSdCard&#160;</td><td class="fielddoc"><p>SD-карта отсутствует </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92" name="aff346f68dcc9b834bed0ce9839e0f8a1a27c29e710f6569064d9329e505f06a92"></a>DataLoss&#160;</td><td class="fielddoc"><p>Потеря данных </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="af6291918482f4841b6bed9d4aebb288d" name="af6291918482f4841b6bed9d4aebb288d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6291918482f4841b6bed9d4aebb288d">&#9670;&#160;</a></span>ThermalGain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#af6291918482f4841b6bed9d4aebb288d">siyi::ThermalGain</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Усиление тепловизора </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef" name="af6291918482f4841b6bed9d4aebb288da28d0edd045e05cf5af64e35ae0c4c6ef"></a>Low&#160;</td><td class="fielddoc"><p>Низкое </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35" name="af6291918482f4841b6bed9d4aebb288da655d20c1ca69519ca647684edbb2db35"></a>High&#160;</td><td class="fielddoc"><p>Высокое </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac7dced743227f9f153c1841fa931a226" name="ac7dced743227f9f153c1841fa931a226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7dced743227f9f153c1841fa931a226">&#9670;&#160;</a></span>ThermalPalette</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ac7dced743227f9f153c1841fa931a226">siyi::ThermalPalette</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Тепловая палитра </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0" name="ac7dced743227f9f153c1841fa931a226a693b2d5c13b6248f4675f8ee0a4c26e0"></a>WhiteHot&#160;</td><td class="fielddoc"><p>Белый горячий </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47" name="ac7dced743227f9f153c1841fa931a226a942d4e37dd5607ab68e54755540d4a47"></a>Reserved&#160;</td><td class="fielddoc"><p>Зарезервировано </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d" name="ac7dced743227f9f153c1841fa931a226ab84a9a38377dc1ab6c6d5005cb461f0d"></a>Sepia&#160;</td><td class="fielddoc"><p>Сепия </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915" name="ac7dced743227f9f153c1841fa931a226a3de1c7dfb40808ee374e0323c5dcd915"></a>Ironbow&#160;</td><td class="fielddoc"><p>Железная дуга </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c" name="ac7dced743227f9f153c1841fa931a226a4aca5ee9a087fb9218bfb662fe92605c"></a>Rainbow&#160;</td><td class="fielddoc"><p>Радуга </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9" name="ac7dced743227f9f153c1841fa931a226a0edc9b073397681dc9f2c479686ea0d9"></a>Night&#160;</td><td class="fielddoc"><p>Ночь </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181" name="ac7dced743227f9f153c1841fa931a226a509e0895bd82e3315e79018a6ce02181"></a>Aurora&#160;</td><td class="fielddoc"><p>Аврора </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf" name="ac7dced743227f9f153c1841fa931a226a90c9afb9fab18375f39a65ed977092cf"></a>RedHot&#160;</td><td class="fielddoc"><p>Красный горячий </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab" name="ac7dced743227f9f153c1841fa931a226a4ddf4cb005260f1c5b21adca4d27c4ab"></a>Jungle&#160;</td><td class="fielddoc"><p>Джунгли </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba" name="ac7dced743227f9f153c1841fa931a226a077262cc53a1fb1b5f651d31b6bf81ba"></a>Medical&#160;</td><td class="fielddoc"><p>Медицинский /&zwj;**. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678" name="ac7dced743227f9f153c1841fa931a226af3f6ab83cd7f688b3c6fb322772c8678"></a>BlackHot&#160;</td><td class="fielddoc"><p>Черный горячий </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e" name="ac7dced743227f9f153c1841fa931a226ae12f231f7911d36aca2709febadfdc1e"></a>GloryHot&#160;</td><td class="fielddoc"><p>Славный горячий </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><b>siyi-sdk</b></li><li class="navelem"><a href="state_8hxx.html">state.hxx</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

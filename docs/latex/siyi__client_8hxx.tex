@@ -1,0 +1,244 @@
+\doxysection{Файл /\+home/\+shlyapin/\+\+Projects/\+siyi-\/sdk/\+include/\+siyi-\/sdk/\+siyi\+\_\+client.hxx}
+\hypertarget{siyi__client_8hxx}{}\label{siyi__client_8hxx}\index{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/siyi\_client.hxx@{/home/shlyapin/Projects/siyi-\/sdk/include/siyi-\/sdk/siyi\_client.hxx}}
+
+
+Клиент для взаимодействия с камерами SIYI.  
+
+
+{\ttfamily \+\#include $<$memory$>$}\newline
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+{\ttfamily \+\#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \+\#include $<$siyi-\/sdk/\+state.\+hxx$>$}\newline
+{\ttfamily \+\#include "{}siyi-\/sdk/\+protocol.\+hxx"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classsiyi_1_1SiyiClient}{siyi::\+\+Siyi\+Client}}
+\begin{DoxyCompactList}\small\item\em Основной класс для управления камерой SIYI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{siyi::\+\+Data\+Stream\+Hz}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23}{Hz\+OFF}} = 0
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3}{Hz2}} = 1
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9}{Hz4}} = 2
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd}{Hz5}} = 3
+, \newline
+\doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d}{Hz10}} = 4
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e}{Hz20}} = 5
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed}{Hz50}} = 6
+, \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf}{Hz100}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Частота отправки данных телеметрии \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{siyi::\+\+Zoom\+Direction}} :\+ int8\+\_\+t \{ \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03}{Zoom\+Out}} = -\/1
+, \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481}{Stop}} = 0
+, \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f}{Zoom\+In}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Направление зума \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{siyi::\+\+Focus\+Direction}} :\+ int8\+\_\+t \{ \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea}{Focus\+Near}} = -\/1
+, \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481}{Stop}} = 0
+, \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc}{Focus\+Far}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Направление фокусировки \end{DoxyCompactList}\item 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{siyi::\+\+Photo\+Record\+Action}} :\+ uint8\+\_\+t \{ \newline
+\doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af}{Take\+Photo}} = 0
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c}{Toggle\+Record}} = 2
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf}{Switch\+Lock\+Mode}} = 3
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e}{Switch\+Follow\+Mode}} = 4
+, \newline
+\doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7}{Switch\+Fpv\+Mode}} = 5
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc}{Set\+Video\+Hdmi}} = 6
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1}{Set\+Video\+Cvbs}} = 7
+, \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c}{Turn\+Off\+Video\+Output}} = 8
+ \}
+\begin{DoxyCompactList}\small\item\em Действия с фото и видео \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Клиент для взаимодействия с камерами SIYI. 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{siyi__client_8hxx_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}\index{siyi\_client.hxx@{siyi\_client.hxx}!DataStreamHz@{DataStreamHz}}
+\index{DataStreamHz@{DataStreamHz}!siyi\_client.hxx@{siyi\_client.hxx}}
+\doxysubsubsection{\texorpdfstring{DataStreamHz}{DataStreamHz}}
+{\footnotesize\ttfamily \label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40} 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{siyi::\+\+Data\+Stream\+Hz}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Частота отправки данных телеметрии 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HzOFF@{HzOFF}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!HzOFF@{HzOFF}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a68f02a7d4638e39cd0a7f2f7cf5a2a23} 
+Hz\+OFF&Отключить отправку \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz2@{Hz2}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz2@{Hz2}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a6f7f321ff8c22055996fbc172f4345a3} 
+Hz2&2 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz4@{Hz4}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz4@{Hz4}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40af4b5f660ddd1945dfb42f6923456ecd9} 
+Hz4&4 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz5@{Hz5}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz5@{Hz5}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a8b174e282eb19025ebfbf8e82ba0c4dd} 
+Hz5&5 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz10@{Hz10}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz10@{Hz10}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40aeea5e98ba2a18623c87216a225ee4e0d} 
+Hz10&10 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz20@{Hz20}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz20@{Hz20}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a59e319e6a3fefbb95ad69c8c28ec349e} 
+Hz20&20 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz50@{Hz50}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz50@{Hz50}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a380af569aed89ba6de57c1d9d3779bed} 
+Hz50&50 Гц \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hz100@{Hz100}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Hz100@{Hz100}}
+}\Hypertarget{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf}\label{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40a0867776b73b2a43ba3013ad6691cf5bf} 
+Hz100&100 Гц \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}\index{siyi\_client.hxx@{siyi\_client.hxx}!FocusDirection@{FocusDirection}}
+\index{FocusDirection@{FocusDirection}!siyi\_client.hxx@{siyi\_client.hxx}}
+\doxysubsubsection{\texorpdfstring{FocusDirection}{FocusDirection}}
+{\footnotesize\ttfamily \label{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b} 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{siyi::\+\+Focus\+Direction}} :\+ int8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Направление фокусировки 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FocusNear@{FocusNear}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!FocusNear@{FocusNear}}
+}\Hypertarget{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea}\label{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baa3f2c694cae4a4dac3b34c680bff3fea} 
+Focus\+Near&Ближе \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop@{Stop}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Stop@{Stop}}
+}\Hypertarget{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481}\label{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5ba11a755d598c0c417f9a36758c3da7481} 
+Stop&Остановить \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FocusFar@{FocusFar}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!FocusFar@{FocusFar}}
+}\Hypertarget{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc}\label{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5baca14c0a3247a9fa29def0df7c1e2b8bc} 
+Focus\+Far&Дальше \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}\index{siyi\_client.hxx@{siyi\_client.hxx}!PhotoRecordAction@{PhotoRecordAction}}
+\index{PhotoRecordAction@{PhotoRecordAction}!siyi\_client.hxx@{siyi\_client.hxx}}
+\doxysubsubsection{\texorpdfstring{PhotoRecordAction}{PhotoRecordAction}}
+{\footnotesize\ttfamily \label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2} 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{siyi::\+\+Photo\+Record\+Action}} :\+ uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Действия с фото и видео 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TakePhoto@{TakePhoto}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!TakePhoto@{TakePhoto}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a32e4460786600f3883452550664c13af} 
+Take\+Photo&Сделать фото \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ToggleRecord@{ToggleRecord}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!ToggleRecord@{ToggleRecord}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2ad134284970b9f19ffc7dbaa4575f3b1c} 
+Toggle\+Record&Начать/\+остановить запись видео \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchLockMode@{SwitchLockMode}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!SwitchLockMode@{SwitchLockMode}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af45f3d5f25f1bae02579f60f70726fbf} 
+Switch\+Lock\+Mode&Переключить в режим Lock. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchFollowMode@{SwitchFollowMode}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!SwitchFollowMode@{SwitchFollowMode}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2af5a9193a90a0f56f2df09de8daa9526e} 
+Switch\+Follow\+Mode&Переключить в режим Follow. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SwitchFpvMode@{SwitchFpvMode}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!SwitchFpvMode@{SwitchFpvMode}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a61f2514bc512868f55eb0f8be6d70dc7} 
+Switch\+Fpv\+Mode&Переключить в режим FPV. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SetVideoHdmi@{SetVideoHdmi}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!SetVideoHdmi@{SetVideoHdmi}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a7c0729a30d2a556e83ae08df276d18cc} 
+Set\+Video\+Hdmi&Вывод видео через HDMI. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SetVideoCvbs@{SetVideoCvbs}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!SetVideoCvbs@{SetVideoCvbs}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a4b82c6c63a97e44050ca652fa1a0aef1} 
+Set\+Video\+Cvbs&Вывод видео через CVBS. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TurnOffVideoOutput@{TurnOffVideoOutput}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!TurnOffVideoOutput@{TurnOffVideoOutput}}
+}\Hypertarget{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c}\label{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2a98ef5daebfb373f746ce0d46f999e15c} 
+Turn\+Off\+Video\+Output&Отключить видеовыход \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}\index{siyi\_client.hxx@{siyi\_client.hxx}!ZoomDirection@{ZoomDirection}}
+\index{ZoomDirection@{ZoomDirection}!siyi\_client.hxx@{siyi\_client.hxx}}
+\doxysubsubsection{\texorpdfstring{ZoomDirection}{ZoomDirection}}
+{\footnotesize\ttfamily \label{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657} 
+enum class \doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{siyi::\+\+Zoom\+Direction}} :\+ int8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Направление зума 
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomOut@{ZoomOut}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!ZoomOut@{ZoomOut}}
+}\Hypertarget{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03}\label{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a2f0d8494b24b27f03ae198ee780b8b03} 
+Zoom\+Out&Уменьшить зум \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stop@{Stop}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!Stop@{Stop}}
+}\Hypertarget{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481}\label{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a11a755d598c0c417f9a36758c3da7481} 
+Stop&Остановить \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomIn@{ZoomIn}!siyi\_client.hxx@{siyi\_client.hxx}}
+\index{siyi\_client.hxx@{siyi\_client.hxx}!ZoomIn@{ZoomIn}}
+}\Hypertarget{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f}\label{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657a5a0f3c981ba9ec235133016ef47d447f} 
+Zoom\+In&Увеличить зум \\
+\hline
+
+\end{DoxyEnumFields}

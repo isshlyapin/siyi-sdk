@@ -1,0 +1,569 @@
+\doxysection{Класс siyi::\+Siyi\+Client}
+\hypertarget{classsiyi_1_1SiyiClient}{}\label{classsiyi_1_1SiyiClient}\index{siyi::SiyiClient@{siyi::SiyiClient}}
+
+
+Основной класс для управления камерой SIYI.  
+
+
+
+
+{\ttfamily \+\#include $<$siyi\+\_\+client.\+hxx$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{Siyi\+Client}} (std::\+string\+\_\+view adress=protocol::\+\+DEFAULT\+\_\+\+IP\+\_\+\+ADDRESS, uint16\+\_\+t port=protocol::\+\+DEFAULT\+\_\+\+PORT)
+\begin{DoxyCompactList}\small\item\em Конструктор с указанием адреса и порта (по умолчанию 192.\+168.\+144.\+25:\+37260). \end{DoxyCompactList}\item 
+\Hypertarget{classsiyi_1_1SiyiClient_a436ea2f38cbb117eabc1571951c20591}\label{classsiyi_1_1SiyiClient_a436ea2f38cbb117eabc1571951c20591} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Siyi\+Client} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. \end{DoxyCompactList}\item 
+\Hypertarget{classsiyi_1_1SiyiClient_acbe4b2f307e5c82c63b4b9f5a77ef41b}\label{classsiyi_1_1SiyiClient_acbe4b2f307e5c82c63b4b9f5a77ef41b} 
+{\bfseries Siyi\+Client} (const Siyi\+Client \&)=delete
+\item 
+\Hypertarget{classsiyi_1_1SiyiClient_a6ed0b93dd4e94edaf0f6874b9aff7c9f}\label{classsiyi_1_1SiyiClient_a6ed0b93dd4e94edaf0f6874b9aff7c9f} 
+\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{Siyi\+Client}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{Siyi\+Client}} \&)=delete
+\item 
+\Hypertarget{classsiyi_1_1SiyiClient_a38fdfa4876844662aa0477951c936f55}\label{classsiyi_1_1SiyiClient_a38fdfa4876844662aa0477951c936f55} 
+{\bfseries Siyi\+Client} (Siyi\+Client \&\&) noexcept
+\item 
+\Hypertarget{classsiyi_1_1SiyiClient_a0f61031277216352ce59e14bd19ae0d6}\label{classsiyi_1_1SiyiClient_a0f61031277216352ce59e14bd19ae0d6} 
+\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{Siyi\+Client}} \& {\bfseries operator=} (\doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}{Siyi\+Client}} \&\&) noexcept
+\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_abc7ab30679ab81cee27fb2a1b28e1ae7}{request\+Gimbal\+Camera\+Firmware\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Запросить версию прошивки \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a7577005004844db69353298645494169}{request\+Gimbal\+Camera\+Hardware\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Запросить аппаратный ID. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a5f03336dc73b7f037ffed0afb0ee1bf8}{request\+Gimbal\+Camera\+Present\+Working\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Запросить текущий рабочий режим подвеса \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aea6f5eec83e4736b29f0906ffea0f67f}{set\+Auto\+Focus}} (uint16\+\_\+t touch\+\_\+x, uint16\+\_\+t touch\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Установить автофокус по координатам \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a516ca726581c53e223dc6064d5c5b419}{set\+Manual\+Zoom\+And\+Auto\+Focus}} (\doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{Zoom\+Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Установить направление изменения zoom и автофокус \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8af12c2dcb3f7ccfa78874b5da3cdf7f}{set\+Absolute\+Zoom\+And\+Auto\+Focus}} (float zoom)
+\begin{DoxyCompactList}\small\item\em Установить абсолютное значение зума и автофокус \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ad96bee682539870df20ea49824403f2f}{request\+Max\+Zoom\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Запросить максимальное значение зума \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a0a94011bb506f8a668d5086314f3e27f}{request\+Current\+Zoom\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Запросить текущее значение зума \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a3619a82e40e4e375f69c8da21327525d}{set\+Manual\+Focus}} (\doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{Focus\+Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Установить направление изменения фокусировки \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aadf61d3a5c582aee56d2a5b28f15c4e8}{set\+Gimbal\+Rotation}} (int8\+\_\+t yaw\+Speed, int8\+\_\+t pitch\+Speed)
+\begin{DoxyCompactList}\small\item\em Установить скорость вращения подвеса \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a9676d123b6c402370fc147dc73770a2f}{set\+Center}} ()
+\begin{DoxyCompactList}\small\item\em Центрировать подвес \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8ec3c2127d87213a413cca82506abd8f}{request\+Gimbal\+Config\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Запросить информацию о конфигурации подвеса \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a1542769dc0c861aac76fe017cbbefec5}{photo\+And\+Record}} (\doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{Photo\+Record\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Выполнить действие с фото или видео \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_af08efc09e31c6b3f09560bfd39d09158}{request\+Gimbal\+Attitude}} ()
+\begin{DoxyCompactList}\small\item\em Запросить данные о подвесе (текущие углы, скорость вращения). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ab50bc1f1f54d74c5135ab6e5521ed598}{set\+Control\+Angle\+To\+Gimbal}} (float yaw, float pitch)
+\begin{DoxyCompactList}\small\item\em Установить углы подвеса (точность до 0.\+1 градуса). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a730d36d5a354911c957b333ac3477c35}{request\+Gimbal\+Camera\+Image\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Запросить режим изображения камеры \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ac8aa09122f12fa7dfa7710fa3c99ad20}{set\+Image\+Mode\+To\+Gimbal\+Camera}} (\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{Gimbal\+Camera\+Image\+Mode}} type)
+\begin{DoxyCompactList}\small\item\em Установить режим изображения камеры \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ad15d99e2970c9dec0e1c498bbceed378}{request\+Data\+Stream}} (\doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{Data\+Stream\+Hz}} hz)
+\begin{DoxyCompactList}\small\item\em Запросить поток данных с определенной частотой \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1SiyiState}{Siyi\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_afac35c6d68569a2ae38387ec1acb3a85}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить полное состояние камеры \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{Firmware\+Version\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a003a13525d24e1194c4d81aab49c6543}{get\+Firmware\+Version\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние версии прошивки \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{Hardware\+IDState}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ae5ef24038960c1d14ed2e7442fc1f2fe}{get\+Hardware\+IDState}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние аппаратного ID. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{Gimbal\+Angle\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a11ac7f858c5ac6421fd1f2fef85ea063}{get\+Gimbal\+Angle\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние углов подвеса \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{Gimbal\+Rotate\+Speed\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a1be4e6cc39f312253737374a634f3c14}{get\+Gimbal\+Rotate\+Speed\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние скорости вращения подвеса \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{Gimbal\+Mode\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a8155a01fd048c7572e657a7445193718}{get\+Gimbal\+Mode\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние режима работы подвеса \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{Mounting\+Direction\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_aab77a2f3e7b01f1bf418e970510876d8}{get\+Mounting\+Direction\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние об ориентации подвеса \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{Gimbal\+Config\+Info\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a3f9aadfb5b49282452cde2dd4e0af597}{get\+Gimbal\+Config\+Info\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние информации о конфигурации подвеса \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{Function\+Feedback\+Info\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_ac06d0c19e39d675a314b918cc0faa9f1}{get\+Function\+Feedback\+Info\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние обратной связи о функции \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{Current\+Zoom\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a70493fdd9d9af2bca1c1debf7815f8f8}{get\+Current\+Zoom\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить текущее значение zoom. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{Max\+Zoom\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a21666f6b61f39bc11b03b2bf238975e3}{get\+Max\+Zoom\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить максимальное значение zoom. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{Gimbal\+Camera\+Image\+Mode\+State}} \doxymbox{\hyperlink{classsiyi_1_1SiyiClient_a5863856a9e228b81c69bb6689a44129e}{get\+Gimbal\+Camera\+Image\+Mode\+State}} () const
+\begin{DoxyCompactList}\small\item\em Получить состояние режима изображения камеры \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Основной класс для управления камерой SIYI. 
+
+Предоставляет методы для отправки команд камере и получения её состояния. 
+
+\label{doc-constructors}
+\Hypertarget{classsiyi_1_1SiyiClient_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220}\index{siyi::SiyiClient@{siyi::SiyiClient}!SiyiClient@{SiyiClient}}
+\index{SiyiClient@{SiyiClient}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{SiyiClient()}{SiyiClient()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_aa86cb00e82f7a93c0f031c271eeb2220} 
+siyi::\+\+Siyi\+Client::\+\+Siyi\+Client (\begin{DoxyParamCaption}\item[{std::\+string\+\_\+view}]{adress}{ = {\ttfamily protocol:\+:\+DEFAULT\+\_\+IP\+\_\+ADDRESS}, }\item[{uint16\+\_\+t}]{port}{ = {\ttfamily protocol:\+:\+DEFAULT\+\_\+PORT}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор с указанием адреса и порта (по умолчанию 192.\+168.\+144.\+25:\+37260). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em address} & IP-\/адрес камеры \\
+\hline
+{\em port} & Порт для подключения \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classsiyi_1_1SiyiClient_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{classsiyi_1_1SiyiClient_a70493fdd9d9af2bca1c1debf7815f8f8}\index{siyi::SiyiClient@{siyi::SiyiClient}!getCurrentZoomState@{getCurrentZoomState}}
+\index{getCurrentZoomState@{getCurrentZoomState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getCurrentZoomState()}{getCurrentZoomState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a70493fdd9d9af2bca1c1debf7815f8f8} 
+\doxymbox{\hyperlink{structsiyi_1_1CurrentZoomState}{Current\+Zoom\+State}} siyi::\+\+Siyi\+Client::\+get\+Current\+Zoom\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить текущее значение zoom. 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1CurrentZoomState}{Current\+Zoom\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a003a13525d24e1194c4d81aab49c6543}\index{siyi::SiyiClient@{siyi::SiyiClient}!getFirmwareVersionState@{getFirmwareVersionState}}
+\index{getFirmwareVersionState@{getFirmwareVersionState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getFirmwareVersionState()}{getFirmwareVersionState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a003a13525d24e1194c4d81aab49c6543} 
+\doxymbox{\hyperlink{structsiyi_1_1FirmwareVersionState}{Firmware\+Version\+State}} siyi::\+\+Siyi\+Client::\+get\+Firmware\+Version\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние версии прошивки 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1FirmwareVersionState}{Firmware\+Version\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ac06d0c19e39d675a314b918cc0faa9f1}\index{siyi::SiyiClient@{siyi::SiyiClient}!getFunctionFeedbackInfoState@{getFunctionFeedbackInfoState}}
+\index{getFunctionFeedbackInfoState@{getFunctionFeedbackInfoState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getFunctionFeedbackInfoState()}{getFunctionFeedbackInfoState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ac06d0c19e39d675a314b918cc0faa9f1} 
+\doxymbox{\hyperlink{structsiyi_1_1FunctionFeedbackInfoState}{Function\+Feedback\+Info\+State}} siyi::\+\+Siyi\+Client::\+get\+Function\+Feedback\+Info\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние обратной связи о функции 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1FunctionFeedbackInfoState}{Function\+Feedback\+Info\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a11ac7f858c5ac6421fd1f2fef85ea063}\index{siyi::SiyiClient@{siyi::SiyiClient}!getGimbalAngleState@{getGimbalAngleState}}
+\index{getGimbalAngleState@{getGimbalAngleState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getGimbalAngleState()}{getGimbalAngleState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a11ac7f858c5ac6421fd1f2fef85ea063} 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalAngleState}{Gimbal\+Angle\+State}} siyi::\+\+Siyi\+Client::\+get\+Gimbal\+Angle\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние углов подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1GimbalAngleState}{Gimbal\+Angle\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a5863856a9e228b81c69bb6689a44129e}\index{siyi::SiyiClient@{siyi::SiyiClient}!getGimbalCameraImageModeState@{getGimbalCameraImageModeState}}
+\index{getGimbalCameraImageModeState@{getGimbalCameraImageModeState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getGimbalCameraImageModeState()}{getGimbalCameraImageModeState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a5863856a9e228b81c69bb6689a44129e} 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalCameraImageModeState}{Gimbal\+Camera\+Image\+Mode\+State}} siyi::\+\+Siyi\+Client::\+get\+Gimbal\+Camera\+Image\+Mode\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние режима изображения камеры 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1GimbalCameraImageModeState}{Gimbal\+Camera\+Image\+Mode\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a3f9aadfb5b49282452cde2dd4e0af597}\index{siyi::SiyiClient@{siyi::SiyiClient}!getGimbalConfigInfoState@{getGimbalConfigInfoState}}
+\index{getGimbalConfigInfoState@{getGimbalConfigInfoState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getGimbalConfigInfoState()}{getGimbalConfigInfoState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a3f9aadfb5b49282452cde2dd4e0af597} 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalConfigInfoState}{Gimbal\+Config\+Info\+State}} siyi::\+\+Siyi\+Client::\+get\+Gimbal\+Config\+Info\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние информации о конфигурации подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1GimbalConfigInfoState}{Gimbal\+Config\+Info\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a8155a01fd048c7572e657a7445193718}\index{siyi::SiyiClient@{siyi::SiyiClient}!getGimbalModeState@{getGimbalModeState}}
+\index{getGimbalModeState@{getGimbalModeState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getGimbalModeState()}{getGimbalModeState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a8155a01fd048c7572e657a7445193718} 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalModeState}{Gimbal\+Mode\+State}} siyi::\+\+Siyi\+Client::\+get\+Gimbal\+Mode\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние режима работы подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1GimbalModeState}{Gimbal\+Mode\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a1be4e6cc39f312253737374a634f3c14}\index{siyi::SiyiClient@{siyi::SiyiClient}!getGimbalRotateSpeedState@{getGimbalRotateSpeedState}}
+\index{getGimbalRotateSpeedState@{getGimbalRotateSpeedState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getGimbalRotateSpeedState()}{getGimbalRotateSpeedState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a1be4e6cc39f312253737374a634f3c14} 
+\doxymbox{\hyperlink{structsiyi_1_1GimbalRotateSpeedState}{Gimbal\+Rotate\+Speed\+State}} siyi::\+\+Siyi\+Client::\+get\+Gimbal\+Rotate\+Speed\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние скорости вращения подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1GimbalRotateSpeedState}{Gimbal\+Rotate\+Speed\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ae5ef24038960c1d14ed2e7442fc1f2fe}\index{siyi::SiyiClient@{siyi::SiyiClient}!getHardwareIDState@{getHardwareIDState}}
+\index{getHardwareIDState@{getHardwareIDState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getHardwareIDState()}{getHardwareIDState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ae5ef24038960c1d14ed2e7442fc1f2fe} 
+\doxymbox{\hyperlink{structsiyi_1_1HardwareIDState}{Hardware\+IDState}} siyi::\+\+Siyi\+Client::\+get\+Hardware\+IDState (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние аппаратного ID. 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1HardwareIDState}{Hardware\+IDState} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a21666f6b61f39bc11b03b2bf238975e3}\index{siyi::SiyiClient@{siyi::SiyiClient}!getMaxZoomState@{getMaxZoomState}}
+\index{getMaxZoomState@{getMaxZoomState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getMaxZoomState()}{getMaxZoomState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a21666f6b61f39bc11b03b2bf238975e3} 
+\doxymbox{\hyperlink{structsiyi_1_1MaxZoomState}{Max\+Zoom\+State}} siyi::\+\+Siyi\+Client::\+get\+Max\+Zoom\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить максимальное значение zoom. 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1MaxZoomState}{Max\+Zoom\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_aab77a2f3e7b01f1bf418e970510876d8}\index{siyi::SiyiClient@{siyi::SiyiClient}!getMountingDirectionState@{getMountingDirectionState}}
+\index{getMountingDirectionState@{getMountingDirectionState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getMountingDirectionState()}{getMountingDirectionState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_aab77a2f3e7b01f1bf418e970510876d8} 
+\doxymbox{\hyperlink{structsiyi_1_1MountingDirectionState}{Mounting\+Direction\+State}} siyi::\+\+Siyi\+Client::\+get\+Mounting\+Direction\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить состояние об ориентации подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1MountingDirectionState}{Mounting\+Direction\+State} 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_afac35c6d68569a2ae38387ec1acb3a85}\index{siyi::SiyiClient@{siyi::SiyiClient}!getState@{getState}}
+\index{getState@{getState}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_afac35c6d68569a2ae38387ec1acb3a85} 
+\doxymbox{\hyperlink{structsiyi_1_1SiyiState}{Siyi\+State}} siyi::\+\+Siyi\+Client::\+get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Получить полное состояние камеры 
+
+\begin{DoxyReturn}{Возвращает}
+Структура \doxylink{structsiyi_1_1SiyiState}{Siyi\+State}. 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a1542769dc0c861aac76fe017cbbefec5}\index{siyi::SiyiClient@{siyi::SiyiClient}!photoAndRecord@{photoAndRecord}}
+\index{photoAndRecord@{photoAndRecord}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{photoAndRecord()}{photoAndRecord()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a1542769dc0c861aac76fe017cbbefec5} 
+bool siyi::\+\+Siyi\+Client::\+photo\+And\+Record (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{siyi__client_8hxx_aca4427feb4696ea11583f5b15f98c3f2}{Photo\+Record\+Action}}}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Выполнить действие с фото или видео 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em action} & Действие \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a0a94011bb506f8a668d5086314f3e27f}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestCurrentZoomValue@{requestCurrentZoomValue}}
+\index{requestCurrentZoomValue@{requestCurrentZoomValue}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestCurrentZoomValue()}{requestCurrentZoomValue()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a0a94011bb506f8a668d5086314f3e27f} 
+bool siyi::\+\+Siyi\+Client::\+request\+Current\+Zoom\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить текущее значение зума 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ad15d99e2970c9dec0e1c498bbceed378}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestDataStream@{requestDataStream}}
+\index{requestDataStream@{requestDataStream}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestDataStream()}{requestDataStream()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ad15d99e2970c9dec0e1c498bbceed378} 
+bool siyi::\+\+Siyi\+Client::\+request\+Data\+Stream (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{siyi__client_8hxx_ac73f44f2aaaa453898f4e0995b7adb40}{Data\+Stream\+Hz}}}]{hz}{}\end{DoxyParamCaption})}
+
+
+
+Запросить поток данных с определенной частотой 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em hz} & Частота \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_af08efc09e31c6b3f09560bfd39d09158}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalAttitude@{requestGimbalAttitude}}
+\index{requestGimbalAttitude@{requestGimbalAttitude}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalAttitude()}{requestGimbalAttitude()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_af08efc09e31c6b3f09560bfd39d09158} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Attitude (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить данные о подвесе (текущие углы, скорость вращения). 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_abc7ab30679ab81cee27fb2a1b28e1ae7}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalCameraFirmwareVersion@{requestGimbalCameraFirmwareVersion}}
+\index{requestGimbalCameraFirmwareVersion@{requestGimbalCameraFirmwareVersion}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalCameraFirmwareVersion()}{requestGimbalCameraFirmwareVersion()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_abc7ab30679ab81cee27fb2a1b28e1ae7} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Camera\+Firmware\+Version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить версию прошивки 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a7577005004844db69353298645494169}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalCameraHardwareID@{requestGimbalCameraHardwareID}}
+\index{requestGimbalCameraHardwareID@{requestGimbalCameraHardwareID}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalCameraHardwareID()}{requestGimbalCameraHardwareID()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a7577005004844db69353298645494169} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Camera\+Hardware\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить аппаратный ID. 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a730d36d5a354911c957b333ac3477c35}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalCameraImageMode@{requestGimbalCameraImageMode}}
+\index{requestGimbalCameraImageMode@{requestGimbalCameraImageMode}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalCameraImageMode()}{requestGimbalCameraImageMode()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a730d36d5a354911c957b333ac3477c35} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Camera\+Image\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить режим изображения камеры 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a5f03336dc73b7f037ffed0afb0ee1bf8}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalCameraPresentWorkingMode@{requestGimbalCameraPresentWorkingMode}}
+\index{requestGimbalCameraPresentWorkingMode@{requestGimbalCameraPresentWorkingMode}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalCameraPresentWorkingMode()}{requestGimbalCameraPresentWorkingMode()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a5f03336dc73b7f037ffed0afb0ee1bf8} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Camera\+Present\+Working\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить текущий рабочий режим подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a8ec3c2127d87213a413cca82506abd8f}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestGimbalConfigInfo@{requestGimbalConfigInfo}}
+\index{requestGimbalConfigInfo@{requestGimbalConfigInfo}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestGimbalConfigInfo()}{requestGimbalConfigInfo()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a8ec3c2127d87213a413cca82506abd8f} 
+bool siyi::\+\+Siyi\+Client::\+request\+Gimbal\+Config\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить информацию о конфигурации подвеса 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ad96bee682539870df20ea49824403f2f}\index{siyi::SiyiClient@{siyi::SiyiClient}!requestMaxZoomValue@{requestMaxZoomValue}}
+\index{requestMaxZoomValue@{requestMaxZoomValue}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{requestMaxZoomValue()}{requestMaxZoomValue()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ad96bee682539870df20ea49824403f2f} 
+bool siyi::\+\+Siyi\+Client::\+request\+Max\+Zoom\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запросить максимальное значение зума 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a8af12c2dcb3f7ccfa78874b5da3cdf7f}\index{siyi::SiyiClient@{siyi::SiyiClient}!setAbsoluteZoomAndAutoFocus@{setAbsoluteZoomAndAutoFocus}}
+\index{setAbsoluteZoomAndAutoFocus@{setAbsoluteZoomAndAutoFocus}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setAbsoluteZoomAndAutoFocus()}{setAbsoluteZoomAndAutoFocus()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a8af12c2dcb3f7ccfa78874b5da3cdf7f} 
+bool siyi::\+\+Siyi\+Client::\+set\+Absolute\+Zoom\+And\+Auto\+Focus (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+Установить абсолютное значение зума и автофокус 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em zoom} & Значение зума \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_aea6f5eec83e4736b29f0906ffea0f67f}\index{siyi::SiyiClient@{siyi::SiyiClient}!setAutoFocus@{setAutoFocus}}
+\index{setAutoFocus@{setAutoFocus}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setAutoFocus()}{setAutoFocus()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_aea6f5eec83e4736b29f0906ffea0f67f} 
+bool siyi::\+\+Siyi\+Client::\+set\+Auto\+Focus (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{touch\+\_\+x}{, }\item[{uint16\+\_\+t}]{touch\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+Установить автофокус по координатам 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em touch\+\_\+x} & Координата X (в диапазоне длины разрешения) \\
+\hline
+{\em touch\+\_\+y} & Координата Y (в диапазоне высоты разрешения) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a9676d123b6c402370fc147dc73770a2f}\index{siyi::SiyiClient@{siyi::SiyiClient}!setCenter@{setCenter}}
+\index{setCenter@{setCenter}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setCenter()}{setCenter()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a9676d123b6c402370fc147dc73770a2f} 
+bool siyi::\+\+Siyi\+Client::\+set\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Центрировать подвес 
+
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ab50bc1f1f54d74c5135ab6e5521ed598}\index{siyi::SiyiClient@{siyi::SiyiClient}!setControlAngleToGimbal@{setControlAngleToGimbal}}
+\index{setControlAngleToGimbal@{setControlAngleToGimbal}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setControlAngleToGimbal()}{setControlAngleToGimbal()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ab50bc1f1f54d74c5135ab6e5521ed598} 
+bool siyi::\+\+Siyi\+Client::\+set\+Control\+Angle\+To\+Gimbal (\begin{DoxyParamCaption}\item[{float}]{yaw}{, }\item[{float}]{pitch}{}\end{DoxyParamCaption})}
+
+
+
+Установить углы подвеса (точность до 0.\+1 градуса). 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em yaw} & Угол рыскания \\
+\hline
+{\em pitch} & Угол тангажа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_aadf61d3a5c582aee56d2a5b28f15c4e8}\index{siyi::SiyiClient@{siyi::SiyiClient}!setGimbalRotation@{setGimbalRotation}}
+\index{setGimbalRotation@{setGimbalRotation}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setGimbalRotation()}{setGimbalRotation()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_aadf61d3a5c582aee56d2a5b28f15c4e8} 
+bool siyi::\+\+Siyi\+Client::\+set\+Gimbal\+Rotation (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{yaw\+Speed}{, }\item[{int8\+\_\+t}]{pitch\+Speed}{}\end{DoxyParamCaption})}
+
+
+
+Установить скорость вращения подвеса 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em yaw\+Speed} & Скорость рыскания (-\/100 \texorpdfstring{$\sim$}{\string~} 100) \\
+\hline
+{\em pitch\+Speed} & Скорость тангажа (-\/100 \texorpdfstring{$\sim$}{\string~} 100) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_ac8aa09122f12fa7dfa7710fa3c99ad20}\index{siyi::SiyiClient@{siyi::SiyiClient}!setImageModeToGimbalCamera@{setImageModeToGimbalCamera}}
+\index{setImageModeToGimbalCamera@{setImageModeToGimbalCamera}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setImageModeToGimbalCamera()}{setImageModeToGimbalCamera()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_ac8aa09122f12fa7dfa7710fa3c99ad20} 
+bool siyi::\+\+Siyi\+Client::\+set\+Image\+Mode\+To\+Gimbal\+Camera (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{state_8hxx_aeee0a5916cac5e729e7aaa24c9686cb9}{Gimbal\+Camera\+Image\+Mode}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Установить режим изображения камеры 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em type} & Тип режима изображения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a3619a82e40e4e375f69c8da21327525d}\index{siyi::SiyiClient@{siyi::SiyiClient}!setManualFocus@{setManualFocus}}
+\index{setManualFocus@{setManualFocus}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setManualFocus()}{setManualFocus()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a3619a82e40e4e375f69c8da21327525d} 
+bool siyi::\+\+Siyi\+Client::\+set\+Manual\+Focus (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{siyi__client_8hxx_af9eafaafd8d6962acdb113f9558bbf5b}{Focus\+Direction}}}]{direction}{}\end{DoxyParamCaption})}
+
+
+
+Установить направление изменения фокусировки 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em direction} & Направление изменения фокусировки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+\Hypertarget{classsiyi_1_1SiyiClient_a516ca726581c53e223dc6064d5c5b419}\index{siyi::SiyiClient@{siyi::SiyiClient}!setManualZoomAndAutoFocus@{setManualZoomAndAutoFocus}}
+\index{setManualZoomAndAutoFocus@{setManualZoomAndAutoFocus}!siyi::SiyiClient@{siyi::SiyiClient}}
+\doxysubsubsection{\texorpdfstring{setManualZoomAndAutoFocus()}{setManualZoomAndAutoFocus()}}
+{\footnotesize\ttfamily \label{classsiyi_1_1SiyiClient_a516ca726581c53e223dc6064d5c5b419} 
+bool siyi::\+\+Siyi\+Client::\+set\+Manual\+Zoom\+And\+Auto\+Focus (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{siyi__client_8hxx_a59337c9556a031f67e87fccb850cd657}{Zoom\+Direction}}}]{direction}{}\end{DoxyParamCaption})}
+
+
+
+Установить направление изменения zoom и автофокус 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em direction} & Направление изменения зума \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если команда успешно отправлена 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+/\+home/\+shlyapin/\+\+Projects/\+siyi-\/sdk/\+include/\+siyi-\/sdk/\+\doxymbox{\hyperlink{siyi__client_8hxx}{siyi\+\_\+client.\+hxx}}\end{DoxyCompactItemize}

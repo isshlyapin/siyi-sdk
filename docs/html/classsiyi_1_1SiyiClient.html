@@ -1,0 +1,1005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>siyi-sdk: Класс siyi::SiyiClient</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">siyi-sdk
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classsiyi_1_1SiyiClient.html','','classsiyi_1_1SiyiClient-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс siyi::SiyiClient</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Основной класс для управления камерой SIYI.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="siyi__client_8hxx_source.html">siyi_client.hxx</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa86cb00e82f7a93c0f031c271eeb2220" id="r_aa86cb00e82f7a93c0f031c271eeb2220"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> (std::string_view adress=protocol::DEFAULT_IP_ADDRESS, uint16_t port=protocol::DEFAULT_PORT)</td></tr>
+<tr class="memdesc:aa86cb00e82f7a93c0f031c271eeb2220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор с указанием адреса и порта (по умолчанию 192.168.144.25:37260).  <br /></td></tr>
+<tr class="memitem:a436ea2f38cbb117eabc1571951c20591" id="r_a436ea2f38cbb117eabc1571951c20591"><td class="memItemLeft"><a id="a436ea2f38cbb117eabc1571951c20591" name="a436ea2f38cbb117eabc1571951c20591"></a>
+&#160;</td><td class="memItemRight"><b>~SiyiClient</b> ()</td></tr>
+<tr class="memdesc:a436ea2f38cbb117eabc1571951c20591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор. <br /></td></tr>
+<tr class="memitem:acbe4b2f307e5c82c63b4b9f5a77ef41b" id="r_acbe4b2f307e5c82c63b4b9f5a77ef41b"><td class="memItemLeft"><a id="acbe4b2f307e5c82c63b4b9f5a77ef41b" name="acbe4b2f307e5c82c63b4b9f5a77ef41b"></a>
+&#160;</td><td class="memItemRight"><b>SiyiClient</b> (const SiyiClient &amp;)=delete</td></tr>
+<tr class="memitem:a6ed0b93dd4e94edaf0f6874b9aff7c9f" id="r_a6ed0b93dd4e94edaf0f6874b9aff7c9f"><td class="memItemLeft"><a id="a6ed0b93dd4e94edaf0f6874b9aff7c9f" name="a6ed0b93dd4e94edaf0f6874b9aff7c9f"></a>
+<a class="el" href="#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (const <a class="el" href="#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> &amp;)=delete</td></tr>
+<tr class="memitem:a38fdfa4876844662aa0477951c936f55" id="r_a38fdfa4876844662aa0477951c936f55"><td class="memItemLeft"><a id="a38fdfa4876844662aa0477951c936f55" name="a38fdfa4876844662aa0477951c936f55"></a>
+&#160;</td><td class="memItemRight"><b>SiyiClient</b> (SiyiClient &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:a0f61031277216352ce59e14bd19ae0d6" id="r_a0f61031277216352ce59e14bd19ae0d6"><td class="memItemLeft"><a id="a0f61031277216352ce59e14bd19ae0d6" name="a0f61031277216352ce59e14bd19ae0d6"></a>
+<a class="el" href="#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> &amp;&#160;</td><td class="memItemRight"><b>operator=</b> (<a class="el" href="#aa86cb00e82f7a93c0f031c271eeb2220">SiyiClient</a> &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:abc7ab30679ab81cee27fb2a1b28e1ae7" id="r_abc7ab30679ab81cee27fb2a1b28e1ae7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abc7ab30679ab81cee27fb2a1b28e1ae7">requestGimbalCameraFirmwareVersion</a> ()</td></tr>
+<tr class="memdesc:abc7ab30679ab81cee27fb2a1b28e1ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить версию прошивки  <br /></td></tr>
+<tr class="memitem:a7577005004844db69353298645494169" id="r_a7577005004844db69353298645494169"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7577005004844db69353298645494169">requestGimbalCameraHardwareID</a> ()</td></tr>
+<tr class="memdesc:a7577005004844db69353298645494169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить аппаратный ID.  <br /></td></tr>
+<tr class="memitem:a5f03336dc73b7f037ffed0afb0ee1bf8" id="r_a5f03336dc73b7f037ffed0afb0ee1bf8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5f03336dc73b7f037ffed0afb0ee1bf8">requestGimbalCameraPresentWorkingMode</a> ()</td></tr>
+<tr class="memdesc:a5f03336dc73b7f037ffed0afb0ee1bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить текущий рабочий режим подвеса  <br /></td></tr>
+<tr class="memitem:aea6f5eec83e4736b29f0906ffea0f67f" id="r_aea6f5eec83e4736b29f0906ffea0f67f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea6f5eec83e4736b29f0906ffea0f67f">setAutoFocus</a> (uint16_t touch_x, uint16_t touch_y)</td></tr>
+<tr class="memdesc:aea6f5eec83e4736b29f0906ffea0f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить автофокус по координатам  <br /></td></tr>
+<tr class="memitem:a516ca726581c53e223dc6064d5c5b419" id="r_a516ca726581c53e223dc6064d5c5b419"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a516ca726581c53e223dc6064d5c5b419">setManualZoomAndAutoFocus</a> (<a class="el" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">ZoomDirection</a> direction)</td></tr>
+<tr class="memdesc:a516ca726581c53e223dc6064d5c5b419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить направление изменения zoom и автофокус  <br /></td></tr>
+<tr class="memitem:a8af12c2dcb3f7ccfa78874b5da3cdf7f" id="r_a8af12c2dcb3f7ccfa78874b5da3cdf7f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8af12c2dcb3f7ccfa78874b5da3cdf7f">setAbsoluteZoomAndAutoFocus</a> (float zoom)</td></tr>
+<tr class="memdesc:a8af12c2dcb3f7ccfa78874b5da3cdf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить абсолютное значение зума и автофокус  <br /></td></tr>
+<tr class="memitem:ad96bee682539870df20ea49824403f2f" id="r_ad96bee682539870df20ea49824403f2f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad96bee682539870df20ea49824403f2f">requestMaxZoomValue</a> ()</td></tr>
+<tr class="memdesc:ad96bee682539870df20ea49824403f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить максимальное значение зума  <br /></td></tr>
+<tr class="memitem:a0a94011bb506f8a668d5086314f3e27f" id="r_a0a94011bb506f8a668d5086314f3e27f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0a94011bb506f8a668d5086314f3e27f">requestCurrentZoomValue</a> ()</td></tr>
+<tr class="memdesc:a0a94011bb506f8a668d5086314f3e27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить текущее значение зума  <br /></td></tr>
+<tr class="memitem:a3619a82e40e4e375f69c8da21327525d" id="r_a3619a82e40e4e375f69c8da21327525d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3619a82e40e4e375f69c8da21327525d">setManualFocus</a> (<a class="el" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">FocusDirection</a> direction)</td></tr>
+<tr class="memdesc:a3619a82e40e4e375f69c8da21327525d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить направление изменения фокусировки  <br /></td></tr>
+<tr class="memitem:aadf61d3a5c582aee56d2a5b28f15c4e8" id="r_aadf61d3a5c582aee56d2a5b28f15c4e8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aadf61d3a5c582aee56d2a5b28f15c4e8">setGimbalRotation</a> (int8_t yawSpeed, int8_t pitchSpeed)</td></tr>
+<tr class="memdesc:aadf61d3a5c582aee56d2a5b28f15c4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить скорость вращения подвеса  <br /></td></tr>
+<tr class="memitem:a9676d123b6c402370fc147dc73770a2f" id="r_a9676d123b6c402370fc147dc73770a2f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9676d123b6c402370fc147dc73770a2f">setCenter</a> ()</td></tr>
+<tr class="memdesc:a9676d123b6c402370fc147dc73770a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Центрировать подвес  <br /></td></tr>
+<tr class="memitem:a8ec3c2127d87213a413cca82506abd8f" id="r_a8ec3c2127d87213a413cca82506abd8f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8ec3c2127d87213a413cca82506abd8f">requestGimbalConfigInfo</a> ()</td></tr>
+<tr class="memdesc:a8ec3c2127d87213a413cca82506abd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить информацию о конфигурации подвеса  <br /></td></tr>
+<tr class="memitem:a1542769dc0c861aac76fe017cbbefec5" id="r_a1542769dc0c861aac76fe017cbbefec5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1542769dc0c861aac76fe017cbbefec5">photoAndRecord</a> (<a class="el" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">PhotoRecordAction</a> action)</td></tr>
+<tr class="memdesc:a1542769dc0c861aac76fe017cbbefec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполнить действие с фото или видео  <br /></td></tr>
+<tr class="memitem:af08efc09e31c6b3f09560bfd39d09158" id="r_af08efc09e31c6b3f09560bfd39d09158"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af08efc09e31c6b3f09560bfd39d09158">requestGimbalAttitude</a> ()</td></tr>
+<tr class="memdesc:af08efc09e31c6b3f09560bfd39d09158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить данные о подвесе (текущие углы, скорость вращения).  <br /></td></tr>
+<tr class="memitem:ab50bc1f1f54d74c5135ab6e5521ed598" id="r_ab50bc1f1f54d74c5135ab6e5521ed598"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab50bc1f1f54d74c5135ab6e5521ed598">setControlAngleToGimbal</a> (float yaw, float pitch)</td></tr>
+<tr class="memdesc:ab50bc1f1f54d74c5135ab6e5521ed598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить углы подвеса (точность до 0.1 градуса).  <br /></td></tr>
+<tr class="memitem:a730d36d5a354911c957b333ac3477c35" id="r_a730d36d5a354911c957b333ac3477c35"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a730d36d5a354911c957b333ac3477c35">requestGimbalCameraImageMode</a> ()</td></tr>
+<tr class="memdesc:a730d36d5a354911c957b333ac3477c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить режим изображения камеры  <br /></td></tr>
+<tr class="memitem:ac8aa09122f12fa7dfa7710fa3c99ad20" id="r_ac8aa09122f12fa7dfa7710fa3c99ad20"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8aa09122f12fa7dfa7710fa3c99ad20">setImageModeToGimbalCamera</a> (<a class="el" href="state_8hxx.html#aeee0a5916cac5e729e7aaa24c9686cb9">GimbalCameraImageMode</a> type)</td></tr>
+<tr class="memdesc:ac8aa09122f12fa7dfa7710fa3c99ad20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить режим изображения камеры  <br /></td></tr>
+<tr class="memitem:ad15d99e2970c9dec0e1c498bbceed378" id="r_ad15d99e2970c9dec0e1c498bbceed378"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad15d99e2970c9dec0e1c498bbceed378">requestDataStream</a> (<a class="el" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">DataStreamHz</a> hz)</td></tr>
+<tr class="memdesc:ad15d99e2970c9dec0e1c498bbceed378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запросить поток данных с определенной частотой  <br /></td></tr>
+<tr class="memitem:afac35c6d68569a2ae38387ec1acb3a85" id="r_afac35c6d68569a2ae38387ec1acb3a85"><td class="memItemLeft"><a class="el" href="structsiyi_1_1SiyiState.html">SiyiState</a>&#160;</td><td class="memItemRight"><a class="el" href="#afac35c6d68569a2ae38387ec1acb3a85">getState</a> () const</td></tr>
+<tr class="memdesc:afac35c6d68569a2ae38387ec1acb3a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить полное состояние камеры  <br /></td></tr>
+<tr class="memitem:a003a13525d24e1194c4d81aab49c6543" id="r_a003a13525d24e1194c4d81aab49c6543"><td class="memItemLeft"><a class="el" href="structsiyi_1_1FirmwareVersionState.html">FirmwareVersionState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a003a13525d24e1194c4d81aab49c6543">getFirmwareVersionState</a> () const</td></tr>
+<tr class="memdesc:a003a13525d24e1194c4d81aab49c6543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние версии прошивки  <br /></td></tr>
+<tr class="memitem:ae5ef24038960c1d14ed2e7442fc1f2fe" id="r_ae5ef24038960c1d14ed2e7442fc1f2fe"><td class="memItemLeft"><a class="el" href="structsiyi_1_1HardwareIDState.html">HardwareIDState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae5ef24038960c1d14ed2e7442fc1f2fe">getHardwareIDState</a> () const</td></tr>
+<tr class="memdesc:ae5ef24038960c1d14ed2e7442fc1f2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние аппаратного ID.  <br /></td></tr>
+<tr class="memitem:a11ac7f858c5ac6421fd1f2fef85ea063" id="r_a11ac7f858c5ac6421fd1f2fef85ea063"><td class="memItemLeft"><a class="el" href="structsiyi_1_1GimbalAngleState.html">GimbalAngleState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a11ac7f858c5ac6421fd1f2fef85ea063">getGimbalAngleState</a> () const</td></tr>
+<tr class="memdesc:a11ac7f858c5ac6421fd1f2fef85ea063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние углов подвеса  <br /></td></tr>
+<tr class="memitem:a1be4e6cc39f312253737374a634f3c14" id="r_a1be4e6cc39f312253737374a634f3c14"><td class="memItemLeft"><a class="el" href="structsiyi_1_1GimbalRotateSpeedState.html">GimbalRotateSpeedState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1be4e6cc39f312253737374a634f3c14">getGimbalRotateSpeedState</a> () const</td></tr>
+<tr class="memdesc:a1be4e6cc39f312253737374a634f3c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние скорости вращения подвеса  <br /></td></tr>
+<tr class="memitem:a8155a01fd048c7572e657a7445193718" id="r_a8155a01fd048c7572e657a7445193718"><td class="memItemLeft"><a class="el" href="structsiyi_1_1GimbalModeState.html">GimbalModeState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8155a01fd048c7572e657a7445193718">getGimbalModeState</a> () const</td></tr>
+<tr class="memdesc:a8155a01fd048c7572e657a7445193718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние режима работы подвеса  <br /></td></tr>
+<tr class="memitem:aab77a2f3e7b01f1bf418e970510876d8" id="r_aab77a2f3e7b01f1bf418e970510876d8"><td class="memItemLeft"><a class="el" href="structsiyi_1_1MountingDirectionState.html">MountingDirectionState</a>&#160;</td><td class="memItemRight"><a class="el" href="#aab77a2f3e7b01f1bf418e970510876d8">getMountingDirectionState</a> () const</td></tr>
+<tr class="memdesc:aab77a2f3e7b01f1bf418e970510876d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние об ориентации подвеса  <br /></td></tr>
+<tr class="memitem:a3f9aadfb5b49282452cde2dd4e0af597" id="r_a3f9aadfb5b49282452cde2dd4e0af597"><td class="memItemLeft"><a class="el" href="structsiyi_1_1GimbalConfigInfoState.html">GimbalConfigInfoState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3f9aadfb5b49282452cde2dd4e0af597">getGimbalConfigInfoState</a> () const</td></tr>
+<tr class="memdesc:a3f9aadfb5b49282452cde2dd4e0af597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние информации о конфигурации подвеса  <br /></td></tr>
+<tr class="memitem:ac06d0c19e39d675a314b918cc0faa9f1" id="r_ac06d0c19e39d675a314b918cc0faa9f1"><td class="memItemLeft"><a class="el" href="structsiyi_1_1FunctionFeedbackInfoState.html">FunctionFeedbackInfoState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac06d0c19e39d675a314b918cc0faa9f1">getFunctionFeedbackInfoState</a> () const</td></tr>
+<tr class="memdesc:ac06d0c19e39d675a314b918cc0faa9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние обратной связи о функции  <br /></td></tr>
+<tr class="memitem:a70493fdd9d9af2bca1c1debf7815f8f8" id="r_a70493fdd9d9af2bca1c1debf7815f8f8"><td class="memItemLeft"><a class="el" href="structsiyi_1_1CurrentZoomState.html">CurrentZoomState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a70493fdd9d9af2bca1c1debf7815f8f8">getCurrentZoomState</a> () const</td></tr>
+<tr class="memdesc:a70493fdd9d9af2bca1c1debf7815f8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить текущее значение zoom.  <br /></td></tr>
+<tr class="memitem:a21666f6b61f39bc11b03b2bf238975e3" id="r_a21666f6b61f39bc11b03b2bf238975e3"><td class="memItemLeft"><a class="el" href="structsiyi_1_1MaxZoomState.html">MaxZoomState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a21666f6b61f39bc11b03b2bf238975e3">getMaxZoomState</a> () const</td></tr>
+<tr class="memdesc:a21666f6b61f39bc11b03b2bf238975e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить максимальное значение zoom.  <br /></td></tr>
+<tr class="memitem:a5863856a9e228b81c69bb6689a44129e" id="r_a5863856a9e228b81c69bb6689a44129e"><td class="memItemLeft"><a class="el" href="structsiyi_1_1GimbalCameraImageModeState.html">GimbalCameraImageModeState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5863856a9e228b81c69bb6689a44129e">getGimbalCameraImageModeState</a> () const</td></tr>
+<tr class="memdesc:a5863856a9e228b81c69bb6689a44129e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить состояние режима изображения камеры  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Основной класс для управления камерой SIYI. </p>
+<p>Предоставляет методы для отправки команд камере и получения её состояния. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="aa86cb00e82f7a93c0f031c271eeb2220" name="aa86cb00e82f7a93c0f031c271eeb2220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86cb00e82f7a93c0f031c271eeb2220">&#9670;&#160;</a></span>SiyiClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">siyi::SiyiClient::SiyiClient </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>adress</em></span><span class="paramdefsep"> = </span><span class="paramdefval">protocol::DEFAULT_IP_ADDRESS</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span><span class="paramdefsep"> = </span><span class="paramdefval">protocol::DEFAULT_PORT</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор с указанием адреса и порта (по умолчанию 192.168.144.25:37260). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>IP-адрес камеры </td></tr>
+    <tr><td class="paramname">port</td><td>Порт для подключения </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a70493fdd9d9af2bca1c1debf7815f8f8" name="a70493fdd9d9af2bca1c1debf7815f8f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70493fdd9d9af2bca1c1debf7815f8f8">&#9670;&#160;</a></span>getCurrentZoomState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1CurrentZoomState.html">CurrentZoomState</a> siyi::SiyiClient::getCurrentZoomState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить текущее значение zoom. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1CurrentZoomState.html" title="Состояние текущего значения зума">CurrentZoomState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a003a13525d24e1194c4d81aab49c6543" name="a003a13525d24e1194c4d81aab49c6543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003a13525d24e1194c4d81aab49c6543">&#9670;&#160;</a></span>getFirmwareVersionState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1FirmwareVersionState.html">FirmwareVersionState</a> siyi::SiyiClient::getFirmwareVersionState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние версии прошивки </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1FirmwareVersionState.html" title="Состояние версии прошивки">FirmwareVersionState</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac06d0c19e39d675a314b918cc0faa9f1" name="ac06d0c19e39d675a314b918cc0faa9f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac06d0c19e39d675a314b918cc0faa9f1">&#9670;&#160;</a></span>getFunctionFeedbackInfoState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1FunctionFeedbackInfoState.html">FunctionFeedbackInfoState</a> siyi::SiyiClient::getFunctionFeedbackInfoState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние обратной связи о функции </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1FunctionFeedbackInfoState.html" title="Состояние обратной связи о функции">FunctionFeedbackInfoState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a11ac7f858c5ac6421fd1f2fef85ea063" name="a11ac7f858c5ac6421fd1f2fef85ea063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ac7f858c5ac6421fd1f2fef85ea063">&#9670;&#160;</a></span>getGimbalAngleState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1GimbalAngleState.html">GimbalAngleState</a> siyi::SiyiClient::getGimbalAngleState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние углов подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1GimbalAngleState.html" title="Состояние углов подвеса">GimbalAngleState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5863856a9e228b81c69bb6689a44129e" name="a5863856a9e228b81c69bb6689a44129e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5863856a9e228b81c69bb6689a44129e">&#9670;&#160;</a></span>getGimbalCameraImageModeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1GimbalCameraImageModeState.html">GimbalCameraImageModeState</a> siyi::SiyiClient::getGimbalCameraImageModeState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние режима изображения камеры </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1GimbalCameraImageModeState.html" title="Состояние режима изображения камеры">GimbalCameraImageModeState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3f9aadfb5b49282452cde2dd4e0af597" name="a3f9aadfb5b49282452cde2dd4e0af597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9aadfb5b49282452cde2dd4e0af597">&#9670;&#160;</a></span>getGimbalConfigInfoState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1GimbalConfigInfoState.html">GimbalConfigInfoState</a> siyi::SiyiClient::getGimbalConfigInfoState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние информации о конфигурации подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1GimbalConfigInfoState.html" title="Состояние информации о конфигурации подвеса">GimbalConfigInfoState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8155a01fd048c7572e657a7445193718" name="a8155a01fd048c7572e657a7445193718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8155a01fd048c7572e657a7445193718">&#9670;&#160;</a></span>getGimbalModeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1GimbalModeState.html">GimbalModeState</a> siyi::SiyiClient::getGimbalModeState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние режима работы подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1GimbalModeState.html" title="Состояние режима подвеса">GimbalModeState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1be4e6cc39f312253737374a634f3c14" name="a1be4e6cc39f312253737374a634f3c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be4e6cc39f312253737374a634f3c14">&#9670;&#160;</a></span>getGimbalRotateSpeedState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1GimbalRotateSpeedState.html">GimbalRotateSpeedState</a> siyi::SiyiClient::getGimbalRotateSpeedState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние скорости вращения подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1GimbalRotateSpeedState.html" title="Состояние скорости вращения подвеса">GimbalRotateSpeedState</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae5ef24038960c1d14ed2e7442fc1f2fe" name="ae5ef24038960c1d14ed2e7442fc1f2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ef24038960c1d14ed2e7442fc1f2fe">&#9670;&#160;</a></span>getHardwareIDState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1HardwareIDState.html">HardwareIDState</a> siyi::SiyiClient::getHardwareIDState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние аппаратного ID. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1HardwareIDState.html" title="Состояние аппаратного ID.">HardwareIDState</a> </dd></dl>
+
+</div>
+</div>
+<a id="a21666f6b61f39bc11b03b2bf238975e3" name="a21666f6b61f39bc11b03b2bf238975e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21666f6b61f39bc11b03b2bf238975e3">&#9670;&#160;</a></span>getMaxZoomState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1MaxZoomState.html">MaxZoomState</a> siyi::SiyiClient::getMaxZoomState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить максимальное значение zoom. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1MaxZoomState.html" title="Состояние максимального значения зума">MaxZoomState</a> </dd></dl>
+
+</div>
+</div>
+<a id="aab77a2f3e7b01f1bf418e970510876d8" name="aab77a2f3e7b01f1bf418e970510876d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab77a2f3e7b01f1bf418e970510876d8">&#9670;&#160;</a></span>getMountingDirectionState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1MountingDirectionState.html">MountingDirectionState</a> siyi::SiyiClient::getMountingDirectionState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить состояние об ориентации подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1MountingDirectionState.html" title="Состояние направления монтажа">MountingDirectionState</a> </dd></dl>
+
+</div>
+</div>
+<a id="afac35c6d68569a2ae38387ec1acb3a85" name="afac35c6d68569a2ae38387ec1acb3a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac35c6d68569a2ae38387ec1acb3a85">&#9670;&#160;</a></span>getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsiyi_1_1SiyiState.html">SiyiState</a> siyi::SiyiClient::getState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить полное состояние камеры </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Структура <a class="el" href="structsiyi_1_1SiyiState.html" title="Полное состояние камеры SIYI.">SiyiState</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a1542769dc0c861aac76fe017cbbefec5" name="a1542769dc0c861aac76fe017cbbefec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1542769dc0c861aac76fe017cbbefec5">&#9670;&#160;</a></span>photoAndRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::photoAndRecord </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="siyi__client_8hxx.html#aca4427feb4696ea11583f5b15f98c3f2">PhotoRecordAction</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполнить действие с фото или видео </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>Действие </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a0a94011bb506f8a668d5086314f3e27f" name="a0a94011bb506f8a668d5086314f3e27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a94011bb506f8a668d5086314f3e27f">&#9670;&#160;</a></span>requestCurrentZoomValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestCurrentZoomValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить текущее значение зума </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="ad15d99e2970c9dec0e1c498bbceed378" name="ad15d99e2970c9dec0e1c498bbceed378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15d99e2970c9dec0e1c498bbceed378">&#9670;&#160;</a></span>requestDataStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestDataStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="siyi__client_8hxx.html#ac73f44f2aaaa453898f4e0995b7adb40">DataStreamHz</a></td>          <td class="paramname"><span class="paramname"><em>hz</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить поток данных с определенной частотой </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hz</td><td>Частота </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="af08efc09e31c6b3f09560bfd39d09158" name="af08efc09e31c6b3f09560bfd39d09158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08efc09e31c6b3f09560bfd39d09158">&#9670;&#160;</a></span>requestGimbalAttitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalAttitude </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить данные о подвесе (текущие углы, скорость вращения). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="abc7ab30679ab81cee27fb2a1b28e1ae7" name="abc7ab30679ab81cee27fb2a1b28e1ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7ab30679ab81cee27fb2a1b28e1ae7">&#9670;&#160;</a></span>requestGimbalCameraFirmwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalCameraFirmwareVersion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить версию прошивки </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a7577005004844db69353298645494169" name="a7577005004844db69353298645494169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7577005004844db69353298645494169">&#9670;&#160;</a></span>requestGimbalCameraHardwareID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalCameraHardwareID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить аппаратный ID. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a730d36d5a354911c957b333ac3477c35" name="a730d36d5a354911c957b333ac3477c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730d36d5a354911c957b333ac3477c35">&#9670;&#160;</a></span>requestGimbalCameraImageMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalCameraImageMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить режим изображения камеры </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a5f03336dc73b7f037ffed0afb0ee1bf8" name="a5f03336dc73b7f037ffed0afb0ee1bf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f03336dc73b7f037ffed0afb0ee1bf8">&#9670;&#160;</a></span>requestGimbalCameraPresentWorkingMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalCameraPresentWorkingMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить текущий рабочий режим подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a8ec3c2127d87213a413cca82506abd8f" name="a8ec3c2127d87213a413cca82506abd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec3c2127d87213a413cca82506abd8f">&#9670;&#160;</a></span>requestGimbalConfigInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestGimbalConfigInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить информацию о конфигурации подвеса </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="ad96bee682539870df20ea49824403f2f" name="ad96bee682539870df20ea49824403f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96bee682539870df20ea49824403f2f">&#9670;&#160;</a></span>requestMaxZoomValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::requestMaxZoomValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запросить максимальное значение зума </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a8af12c2dcb3f7ccfa78874b5da3cdf7f" name="a8af12c2dcb3f7ccfa78874b5da3cdf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af12c2dcb3f7ccfa78874b5da3cdf7f">&#9670;&#160;</a></span>setAbsoluteZoomAndAutoFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setAbsoluteZoomAndAutoFocus </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>zoom</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить абсолютное значение зума и автофокус </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoom</td><td>Значение зума </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="aea6f5eec83e4736b29f0906ffea0f67f" name="aea6f5eec83e4736b29f0906ffea0f67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6f5eec83e4736b29f0906ffea0f67f">&#9670;&#160;</a></span>setAutoFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setAutoFocus </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>touch_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>touch_y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить автофокус по координатам </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touch_x</td><td>Координата X (в диапазоне длины разрешения) </td></tr>
+    <tr><td class="paramname">touch_y</td><td>Координата Y (в диапазоне высоты разрешения) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a9676d123b6c402370fc147dc73770a2f" name="a9676d123b6c402370fc147dc73770a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9676d123b6c402370fc147dc73770a2f">&#9670;&#160;</a></span>setCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setCenter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Центрировать подвес </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="ab50bc1f1f54d74c5135ab6e5521ed598" name="ab50bc1f1f54d74c5135ab6e5521ed598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50bc1f1f54d74c5135ab6e5521ed598">&#9670;&#160;</a></span>setControlAngleToGimbal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setControlAngleToGimbal </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>yaw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить углы подвеса (точность до 0.1 градуса). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yaw</td><td>Угол рыскания </td></tr>
+    <tr><td class="paramname">pitch</td><td>Угол тангажа </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="aadf61d3a5c582aee56d2a5b28f15c4e8" name="aadf61d3a5c582aee56d2a5b28f15c4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf61d3a5c582aee56d2a5b28f15c4e8">&#9670;&#160;</a></span>setGimbalRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setGimbalRotation </td>
+          <td>(</td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>yawSpeed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>pitchSpeed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить скорость вращения подвеса </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yawSpeed</td><td>Скорость рыскания (-100 ~ 100) </td></tr>
+    <tr><td class="paramname">pitchSpeed</td><td>Скорость тангажа (-100 ~ 100) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="ac8aa09122f12fa7dfa7710fa3c99ad20" name="ac8aa09122f12fa7dfa7710fa3c99ad20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8aa09122f12fa7dfa7710fa3c99ad20">&#9670;&#160;</a></span>setImageModeToGimbalCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setImageModeToGimbalCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="state_8hxx.html#aeee0a5916cac5e729e7aaa24c9686cb9">GimbalCameraImageMode</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить режим изображения камеры </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Тип режима изображения </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a3619a82e40e4e375f69c8da21327525d" name="a3619a82e40e4e375f69c8da21327525d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3619a82e40e4e375f69c8da21327525d">&#9670;&#160;</a></span>setManualFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setManualFocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="siyi__client_8hxx.html#af9eafaafd8d6962acdb113f9558bbf5b">FocusDirection</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить направление изменения фокусировки </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Направление изменения фокусировки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<a id="a516ca726581c53e223dc6064d5c5b419" name="a516ca726581c53e223dc6064d5c5b419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516ca726581c53e223dc6064d5c5b419">&#9670;&#160;</a></span>setManualZoomAndAutoFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool siyi::SiyiClient::setManualZoomAndAutoFocus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="siyi__client_8hxx.html#a59337c9556a031f67e87fccb850cd657">ZoomDirection</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить направление изменения zoom и автофокус </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Направление изменения зума </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если команда успешно отправлена </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>/home/shlyapin/Projects/siyi-sdk/include/siyi-sdk/<a class="el" href="siyi__client_8hxx_source.html">siyi_client.hxx</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>siyi</b></li><li class="navelem"><a href="classsiyi_1_1SiyiClient.html">SiyiClient</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
