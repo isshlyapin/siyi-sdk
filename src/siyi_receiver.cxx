@@ -15,16 +15,34 @@ SiyiReceiver::SiyiReceiver(std::shared_ptr<ITransport> transport)
 
 std::expected<std::unique_ptr<protocol::SiyiFrame>, protocol::DecodeFrameError> 
 SiyiReceiver::receive() {
-  if (!pendingFrames_.empty()) {
-    auto frame = std::move(pendingFrames_.front());
-    pendingFrames_.pop_front();
+  const auto popNextNewerPendingFrame = [this]()
+      -> std::expected<std::unique_ptr<protocol::SiyiFrame>, protocol::DecodeFrameError> {
+    bool hadPendingFrames = false;
 
-    if (!seqNewer(frame->seq, seq_)) {
+    while (!pendingFrames_.empty()) {
+      hadPendingFrames = true;
+
+      auto frame = std::move(pendingFrames_.front());
+      pendingFrames_.pop_front();
+
+      if (!seqNewer(frame->seq, seq_)) {
+        continue;
+      }
+
+      seq_ = frame->seq;
+      return frame;
+    }
+
+    if (hadPendingFrames) {
       return std::unexpected(protocol::DecodeFrameError::OldFrame);
     }
 
-    seq_ = frame->seq;
-    return frame;
+    return std::unexpected(protocol::DecodeFrameError::NoFrame);
+  };
+
+  auto pendingFrame = popNextNewerPendingFrame();
+  if (pendingFrame) {
+    return std::move(pendingFrame.value());
   }
 
   auto result = transport_->receive();
@@ -40,24 +58,16 @@ SiyiReceiver::receive() {
     return std::unexpected(decodeResult.error());
   }
 
-  if (pendingFrames_.empty()) {
-    return std::unexpected(protocol::DecodeFrameError::NoFrame);
-  }
-
-  auto frame = std::move(pendingFrames_.front());
-  pendingFrames_.pop_front();
-
-  if (!seqNewer(frame->seq, seq_)) {
-    return std::unexpected(protocol::DecodeFrameError::OldFrame);
-  }
-
-  seq_ = frame->seq;
-  return frame;
+  return popNextNewerPendingFrame();
 }
 
 std::expected<void, protocol::DecodeFrameError>
 SiyiReceiver::decodeDatagramFrames(std::unique_ptr<DataGram> datagram) {
   const auto& buffer = datagram->buffer;
+  if (buffer.size() < protocol::MIN_FRAME_SIZE) {
+    return std::unexpected(protocol::DecodeFrameError::TooShort);
+  }
+
   size_t offset = 0;
 
   while (offset < buffer.size()) {

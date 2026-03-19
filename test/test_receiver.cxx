@@ -133,6 +133,60 @@ TEST_F(SiyiReceiverTest, OldFrameIsRejected) {
   EXPECT_EQ(old.error(), DecodeFrameError::OldFrame);
 }
 
+TEST_F(SiyiReceiverTest, PendingOldFramesAreSkippedUntilNewerFound) {
+  // Фиксируем текущий seq=5
+  transport_->pushReceive(
+      encodedDatagram(SiyiFrameCtrl::Response, 5,
+                      SiyiFrameCmd::RequestGimbalAttitude));
+  ASSERT_TRUE(receiver_->receive().has_value());
+
+  auto oldFrame = encodedDatagram(SiyiFrameCtrl::Response, 3,
+                                  SiyiFrameCmd::RequestGimbalAttitude);
+  auto newFrame = encodedDatagram(SiyiFrameCtrl::Response, 6,
+                                  SiyiFrameCmd::RequestGimbalAttitude);
+
+  std::vector<uint8_t> merged;
+  merged.reserve(oldFrame->buffer.size() + newFrame->buffer.size());
+  merged.insert(merged.end(), oldFrame->buffer.begin(), oldFrame->buffer.end());
+  merged.insert(merged.end(), newFrame->buffer.begin(), newFrame->buffer.end());
+  transport_->pushReceive(std::move(merged));
+
+  auto result = receiver_->receive();
+  ASSERT_TRUE(result.has_value());
+  EXPECT_EQ(result.value()->seq, 6u);
+}
+
+TEST_F(SiyiReceiverTest, OnlyOldPendingFramesAreDrainedAndRejectedOnce) {
+  // Фиксируем текущий seq=5
+  transport_->pushReceive(
+      encodedDatagram(SiyiFrameCtrl::Response, 5,
+                      SiyiFrameCmd::RequestGimbalAttitude));
+  ASSERT_TRUE(receiver_->receive().has_value());
+
+  auto old1 = encodedDatagram(SiyiFrameCtrl::Response, 3,
+                              SiyiFrameCmd::RequestGimbalAttitude);
+  auto old2 = encodedDatagram(SiyiFrameCtrl::Response, 4,
+                              SiyiFrameCmd::RequestGimbalAttitude);
+
+  std::vector<uint8_t> mergedOld;
+  mergedOld.reserve(old1->buffer.size() + old2->buffer.size());
+  mergedOld.insert(mergedOld.end(), old1->buffer.begin(), old1->buffer.end());
+  mergedOld.insert(mergedOld.end(), old2->buffer.begin(), old2->buffer.end());
+  transport_->pushReceive(std::move(mergedOld));
+
+  auto oldResult = receiver_->receive();
+  ASSERT_FALSE(oldResult.has_value());
+  EXPECT_EQ(oldResult.error(), DecodeFrameError::OldFrame);
+
+  // Очередь old-пакетов должна быть очищена, следующий новый кадр принимается сразу.
+  transport_->pushReceive(
+      encodedDatagram(SiyiFrameCtrl::Response, 6,
+                      SiyiFrameCmd::RequestGimbalAttitude));
+  auto nextResult = receiver_->receive();
+  ASSERT_TRUE(nextResult.has_value());
+  EXPECT_EQ(nextResult.value()->seq, 6u);
+}
+
 TEST_F(SiyiReceiverTest, SameSeqIsRejected) {
   // Принимаем фрейм с seq=10
   transport_->pushReceive(
@@ -247,6 +301,14 @@ TEST_F(SiyiReceiverTest, TransportNotOpen) {
 TEST_F(SiyiReceiverTest, CorruptedDatagram_TooShort) {
   // Слишком короткий буфер
   transport_->pushReceive({0x55, 0x66, 0x01});
+
+  auto result = receiver_->receive();
+  ASSERT_FALSE(result.has_value());
+  EXPECT_EQ(result.error(), DecodeFrameError::TooShort);
+}
+
+TEST_F(SiyiReceiverTest, CorruptedDatagram_EmptyIsTooShort) {
+  transport_->pushReceive(std::vector<uint8_t>{});
 
   auto result = receiver_->receive();
   ASSERT_FALSE(result.has_value());
