@@ -1,7 +1,9 @@
 #include <memory>
+#include <vector>
 #include <expected>
 
 #include "siyi-sdk/mydef.hxx"
+#include "siyi-sdk/helpers.hxx"
 #include "siyi-sdk/protocol.hxx"
 #include "siyi-sdk/itransport.hxx"
 #include "siyi-sdk/siyi_receiver.hxx"
@@ -13,6 +15,18 @@ SiyiReceiver::SiyiReceiver(std::shared_ptr<ITransport> transport)
 
 std::expected<std::unique_ptr<protocol::SiyiFrame>, protocol::DecodeFrameError> 
 SiyiReceiver::receive() {
+  if (!pendingFrames_.empty()) {
+    auto frame = std::move(pendingFrames_.front());
+    pendingFrames_.pop_front();
+
+    if (!seqNewer(frame->seq, seq_)) {
+      return std::unexpected(protocol::DecodeFrameError::OldFrame);
+    }
+
+    seq_ = frame->seq;
+    return frame;
+  }
+
   auto result = transport_->receive();
   if (!result) {
     return std::unexpected(protocol::DecodeFrameError::NoFrame);
@@ -21,17 +35,61 @@ SiyiReceiver::receive() {
   // dbgs << "Received datagram of size " << result.value()->buffer.size() << "\n";
   // print_datagram(*(result.value()));
   
-  auto frame = protocol::decode(std::move(result.value()));
-  if (!frame) {
-    return std::unexpected(frame.error());
+  auto decodeResult = decodeDatagramFrames(std::move(result.value()));
+  if (!decodeResult) {
+    return std::unexpected(decodeResult.error());
   }
-  
-  if (!seqNewer(frame.value()->seq, seq_)) {
+
+  if (pendingFrames_.empty()) {
+    return std::unexpected(protocol::DecodeFrameError::NoFrame);
+  }
+
+  auto frame = std::move(pendingFrames_.front());
+  pendingFrames_.pop_front();
+
+  if (!seqNewer(frame->seq, seq_)) {
     return std::unexpected(protocol::DecodeFrameError::OldFrame);
   }
-  
-  seq_ = frame.value()->seq;
-  return std::move(frame.value());    
+
+  seq_ = frame->seq;
+  return frame;
+}
+
+std::expected<void, protocol::DecodeFrameError>
+SiyiReceiver::decodeDatagramFrames(std::unique_ptr<DataGram> datagram) {
+  const auto& buffer = datagram->buffer;
+  size_t offset = 0;
+
+  while (offset < buffer.size()) {
+    const size_t remaining = buffer.size() - offset;
+    if (remaining < protocol::MIN_FRAME_SIZE) {
+      return std::unexpected(protocol::DecodeFrameError::TooShort);
+    }
+
+    const uint16_t inputStx = utility::read_u16_le(buffer, offset);
+    if (inputStx != protocol::STX) {
+      return std::unexpected(protocol::DecodeFrameError::BadStx);
+    }
+
+    const uint16_t dataLen = utility::read_u16_le(buffer, offset + 3);
+    const size_t frameSize = 8 + static_cast<size_t>(dataLen) + 2;
+    if (remaining < frameSize) {
+      return std::unexpected(protocol::DecodeFrameError::LengthMismatch);
+    }
+
+    std::vector<uint8_t> frameBuffer(buffer.begin() + static_cast<std::ptrdiff_t>(offset),
+                                     buffer.begin() + static_cast<std::ptrdiff_t>(offset + frameSize));
+
+    auto frame = protocol::decode(std::make_unique<DataGram>(DataGram{std::move(frameBuffer)}));
+    if (!frame) {
+      return std::unexpected(frame.error());
+    }
+
+    pendingFrames_.push_back(std::move(frame.value()));
+    offset += frameSize;
+  }
+
+  return {};
 }
 
 bool SiyiReceiver::seqNewer(uint16_t newSeq, uint16_t oldSeq) {

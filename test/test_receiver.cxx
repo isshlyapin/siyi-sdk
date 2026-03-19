@@ -86,6 +86,32 @@ TEST_F(SiyiReceiverTest, ReceiveMultipleFramesIncreasingSeq) {
   }
 }
 
+TEST_F(SiyiReceiverTest, ReceiveConcatenatedFramesInSingleDatagram) {
+  auto first = encodedDatagram(SiyiFrameCtrl::Response, 1,
+                               SiyiFrameCmd::RequestGimbalCameraFirmwareVersion);
+  auto second = encodedDatagram(SiyiFrameCtrl::Response, 2,
+                                SiyiFrameCmd::RequestGimbalCameraHardwareID);
+
+  std::vector<uint8_t> merged;
+  merged.reserve(first->buffer.size() + second->buffer.size());
+  merged.insert(merged.end(), first->buffer.begin(), first->buffer.end());
+  merged.insert(merged.end(), second->buffer.begin(), second->buffer.end());
+
+  transport_->pushReceive(std::move(merged));
+
+  auto firstResult = receiver_->receive();
+  ASSERT_TRUE(firstResult.has_value());
+  EXPECT_EQ(firstResult.value()->seq, 1u);
+  EXPECT_EQ(firstResult.value()->cmd,
+            SiyiFrameCmd::RequestGimbalCameraFirmwareVersion);
+
+  auto secondResult = receiver_->receive();
+  ASSERT_TRUE(secondResult.has_value());
+  EXPECT_EQ(secondResult.value()->seq, 2u);
+  EXPECT_EQ(secondResult.value()->cmd,
+            SiyiFrameCmd::RequestGimbalCameraHardwareID);
+}
+
 // ============================================================
 // Фильтрация старых (OldFrame)
 // ============================================================
